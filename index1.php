@@ -2,6 +2,17 @@
 
 <html lang="en">
 
+<?php   
+$slider = "
+
+
+
+
+";
+
+
+?>
+
 
 <!-- Mirrored from thewebmax.com/spa/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Aug 2022 10:10:09 GMT -->
 <head>
@@ -120,27 +131,27 @@
                         <div class="header-nav navbar-collapse collapse ">
                             <ul class=" nav navbar-nav">
                                 <li class="active">
-                                    <a href="javascript:;">Home</a>
+                                    <a href="index.html">Home</a>
                                 </li>
                             
                                 <li>
-                                    <a href="javascript:;">About Us</a>
+                                    <a href="about.html">About Us</a>
                                 </li>
                                 
                                 <li>
-                                    <a href="javascript:;">Services</a>
+                                    <a href="services.html">Services</a>
                                 </li>
                             
                                 <li>
-                                    <a href="javascript:;">Clients</a>
+                                    <a href="clients.html">Clients</a>
                                 </li>
                                 
                                 <li class="submenu-direction">
-                                    <a href="javascript:;">Galary</a>
+                                    <a href="gallery.html">Galary</a>
                                 </li>
 
                                 <li class="submenu-direction">
-                                    <a href="javascript:;">Contact Us</a>
+                                    <a href="contact.html">Contact Us</a>
                                 </li>
 
                             </ul>
@@ -163,7 +174,7 @@
                         <!-- SLIDE  -->
                         <li data-index="rs-2938" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"   data-thumb="images/main-slider/slider2/slide1.jpg"  data-rotate="0"  data-fsslotamount="7" data-saveperformance="off"  data-title="" data-param1="Additional Text" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                             <!-- MAIN IMAGE -->
-                            <img src="images/main-slider/slider2/slide1.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                            <img src="<?php echo "images/main-slider/slider2/slide1.jpg"; ?>" alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                             <!-- LAYERS -->
                            
                     
@@ -191,7 +202,7 @@
                                 style="z-index: 11;
                                 white-space: nowrap;
                                 text-transform:uppercase;">
-                                <div class="text-secondry"> Best Place  <span class="text-primary"> For you</span></div>
+                                <div class="text-secondry"> <?php echo "Bestest Plalce";  ?>  <span class="text-primary"> <?php echo "for me" ?></span></div>
                                 </div>
                     
                             <!-- LAYER NR. 2 -->
@@ -306,7 +317,7 @@
                                                            
                         </li>
                         <!-- SLIDE  -->
-                        <li data-index="rs-2939" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/main-slider/slider2/slide2.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        <li data-index="rs-2940" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/main-slider/slider2/slide2.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                             <!-- MAIN IMAGE -->
                             <img src="images/main-slider/slider2/slide2.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                             <!-- LAYERS -->
@@ -451,7 +462,7 @@
                                                            
                         </li>
                         <!-- SLIDE  -->
-                        <li data-index="rs-2940" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"   data-thumb="images/main-slider/slider2/slide3.jpg"  data-rotate="0"   data-fsslotamount="7" data-saveperformance="off"  data-title="" data-param1="Additional Text" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        <li data-index="rs-2941" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"   data-thumb="images/main-slider/slider2/slide3.jpg"  data-rotate="0"   data-fsslotamount="7" data-saveperformance="off"  data-title="" data-param1="Additional Text" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                             <!-- MAIN IMAGE -->
                             <img src="images/main-slider/slider2/slide3.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                             <!-- LAYERS -->
@@ -2087,8 +2098,8 @@
                                     <span class="flaticon-happy"></span>
                                 </span>
                                 <div class="icon-content">
-                                    <div><span class="counter"> 458 </span><b>+</b></div>
-                                    <span class="text-uppercase">Happy Clients</span>
+                                    <div><span class="counter" id="clients_counter"> 458 </span><b>+</b></div>
+                                    <span class="text-uppercase" >Happy Clients</span>
                                 </div>
                             </div>
                         </div>
@@ -2099,7 +2110,7 @@
                                     <span class="flaticon-trophy"></span>
                                 </span>
                                 <div class="icon-content">
-                                    <div><span class="counter"> 698 </span><b>+</b></div>
+                                    <div><span class="counter" > 698 </span><b>+</b></div>
                                     <span class="text-uppercase">Win Awards</span>
                                 </div>
                             </div>
@@ -2111,7 +2122,7 @@
                                     <span class="flaticon-female-hairs"></span>
                                 </span>
                                 <div class="icon-content">
-                                    <div><span class="counter"> 894 </span><b>+</b></div>
+                                    <div><span class="counter" > 894 </span><b>+</b></div>
                                     <span class="text-uppercase">Our Trainer</span>
                                 </div>
                             </div>
@@ -2999,7 +3010,9 @@
     </div>
 </div>
 <!-- LOADING AREA  END ====== -->
-<!-- JAVASCRIPT  FILES ========================================= --> 
+<!-- JAVASCRIPT  FILES ========================================= -->
+<!-- //CUSTOM JS  -->
+<script type="text/javascript" src="./js/custom/home.js" defer></script>
 <script   src="js/jquery-1.12.4.min.js"></script><!-- JQUERY.MIN JS -->
 <script   src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
 
@@ -3117,7 +3130,7 @@
 <!-- STYLE SWITCHER END ==== -->
 
 
-<script type="text/javascript" src="./js/custom/home.js"></script>
+
 
 </body>
 
