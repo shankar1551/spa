@@ -9,18 +9,32 @@
     // checkAutorization();
     $data = json_decode(file_get_contents("php://input"),true);
     
-    
+
+
     
     //VERIFYING INPUT FIELDS
     if(empty($data)) response(json_encode("nodata"),400);
+
+    $message = $data['message'];
+    $name = $data['name'];
+    $email = $data['email'];
+    $phone = $data['phone'];
    
     $object = new query();
     
-    //FILTERING STRING
-    // $table = $object->FilterString($data);
+    // FILTERING STRING
+    $message = $object->FilterString($message);
+    $name = $object->FilterString($name);
+    $email = $object->FilterString($email);
+    $phone = $object->FilterString($phone);
 
-    //fetching All the data required in the hope page
-    // $info = $object-> GetHomePageInfo($data);
+    $data = array(
+            "name"=>$name,
+            "email"=>$email,
+            "phone"=>$phone,
+            "message"=>$message
+    );
+    $info = $object->InsertData('messages',$data);
 
     response(json_encode($info),200);
 

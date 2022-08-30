@@ -11,7 +11,6 @@
     $counter = $object->RetriveData("clients");
     // $gallery = $object->RetriveData("");
     $testimonial = $object->RetriveData("testimonials");
-    print_r($testimonial);
 
 ?>
 
@@ -132,27 +131,27 @@
                         <div class="header-nav navbar-collapse collapse ">
                             <ul class=" nav navbar-nav">
                                 <li class="active">
-                                    <a href="index.html">Home</a>
+                                    <a href="index.php">Home</a>
                                 </li>
                             
                                 <li>
-                                    <a href="about.html">About Us</a>
+                                    <a href="about.php">About Us</a>
                                 </li>
                                 
                                 <li>
-                                    <a href="services.html">Services</a>
+                                    <a href="services.php">Services</a>
                                 </li>
                             
                                 <li>
-                                    <a href="clients.html">Clients</a>
+                                    <a href="clients.php">Clients</a>
                                 </li>
                                 
-                                <li class="submenu-direction">
-                                    <a href="gallery.html">Galary</a>
+                                <li >
+                                    <a href="gallery.php">Galary</a>
                                 </li>
 
                                 <li class="submenu-direction">
-                                    <a href="contact.html">Contact Us</a>
+                                    <a href="contact.php">Contact Us</a>
                                 </li>
 
                             </ul>
@@ -2498,29 +2497,29 @@
                             	<div class="section-content bg-gray">
                                       <div class="contact-home-right p-a30">
                                       	<h5 class="text-uppercase font-26 p-b20 font-weight-400">GET IN TOUCH</h5>
-                                      	<form  class="cons-contact-form2" method="post" action="https://thewebmax.com/spa/form-handler2.php">
+                                      	<form  class="cons-contact-form2" method="get" action="#" id="contact_form">
                                         	<div class="form-group">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                                    <input name="username" type="text" required class="form-control" placeholder="Neme">
+                                                    <input name="username" type="text" required class="form-control" placeholder="Neme" id="name">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                                    <input name="email" type="text" class="form-control" required placeholder="Email">
+                                                    <input name="email" type="email" class="form-control" required placeholder="Email" id="email">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-book"></i></span>
-                                                    <input name="phone" type="text" class="form-control" required placeholder="Phone">
+                                                    <input name="phone" type="text" class="form-control" required placeholder="Phone" id="phone">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <span class="input-group-addon v-align-t"><i class="fa fa-pencil"></i></span>
-                                                    <textarea name="message" class="form-control" rows="4" placeholder="Message"></textarea>
+                                                    <textarea name="message" class="form-control" rows="4" placeholder="Message" id="message"></textarea>
                                                 </div>
                                             </div>
                                             <button type="submit" class="site-button skew-icon-btn radius-sm">
@@ -2728,7 +2727,7 @@
  
 
 <!-- LOADING AREA START ===== -->
-<div class="loading-area">
+<!-- <div class="loading-area">
     <div class="loading-box"></div>
     <div class="loading-pic">
         <div class="cssload-container">
@@ -2737,11 +2736,11 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- LOADING AREA  END ====== -->
 <!-- JAVASCRIPT  FILES ========================================= -->
 <!-- //CUSTOM JS  -->
-<script type="text/javascript" src="./js/custom/home.js" defer></script>
+<script type="text/javascript" src="./js/custom/index.js" defer></script>
 <script   src="js/jquery-1.12.4.min.js"></script><!-- JQUERY.MIN JS -->
 <script   src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
 
@@ -2859,7 +2858,40 @@
 <!-- STYLE SWITCHER END ==== -->
 
 
+<!-- =========MODEL========== -->
+                            <div class="m-b30">
+                                <!-- <h4 class="text-uppercase m-b20 m-t50">Default Modal</h4>  -->
+                                 
+                                <!-- TRIGGER THE MODAL WITH A BUTTON -->
+                                <button style="display:none" id="model_btn" type="button" class="site-button  m-r15" data-toggle="modal" data-target="#Default-Modal">Default Modal  <i class="fa fa-angle-double-right"></i></button>
+                                <!-- MODAL -->
+                                <div id="Default-Modal" class="modal fade" role="dialog">
+                                  <div class="modal-dialog">
+                                    <!-- MODAL CONTENT-->
+                                    <div class="modal-content">
+                                      <div class="modal-header bg-primary">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title text-white">Success</h4>
+                                      </div>
+                                      <div class="modal-body">
+                                        <p>Your Feedback is Successfully Received. Thank You!</p>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="site-button " data-dismiss="modal">Close
+                                         <i class="fa fa-angle-double-right"></i></button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="wt-divider bg-gray-dark"><i class="icon-dot c-square"></i></div>
+                            </div>
 
+
+
+
+
+
+<!-- =======MODEL END======== -->
 
 </body>
 

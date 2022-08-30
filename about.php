@@ -118,27 +118,27 @@
                         <div class="header-nav navbar-collapse collapse ">
                             <ul class=" nav navbar-nav">
                                 <li>
-                                    <a href="index.html">Home</a>
+                                    <a href="index.php">Home</a>
                                 </li>
                             
                                 <li class="active">
-                                    <a href="about.html">About Us</a>
+                                    <a href="about.php">About Us</a>
                                 </li>
                                 
                                 <li >
-                                    <a href="services.html">Services</a>
+                                    <a href="services.php">Services</a>
                                 </li>
                             
                                 <li>
-                                    <a href="clients.html">Clients</a>
+                                    <a href="clients.php">Clients</a>
                                 </li>
                                 
-                                <li class="submenu-direction">
-                                    <a href="gallery.html">Galary</a>
+                                <li >
+                                    <a href="gallery.php">Galary</a>
                                 </li>
 
-                                <li class="submenu-direction">
-                                    <a href="contact.html">Contact Us</a>
+                                <li >
+                                    <a href="contact.php">Contact Us</a>
                                 </li>
 
                             </ul>

@@ -81,24 +81,22 @@
         //INSERT DATA
         public function InsertData($tablename,$array) {
             if(isset($tablename) && isset($array)) {
-                $random = rand();
                 $count = count($array);
                 $counter = 1;
-                $query = "INSERT INTO $tablename VALUES(NULL,'$random',";
+                $query = "INSERT INTO  `$tablename` VALUES(NULL,";
                 foreach($array as $key=>$value) {
-                    if($count == $counter) {
-                        $query .= "'$value', NOW())";
-                    }else {
+                    if($count == $counter) 
+                        $query .= "'$value',  current_timestamp());";
+                    else
                         $query .= "'$value',";
-                    }
                     $counter++;
                 }
-
+                
                 $exe = $this->connect()->query($query);
-
                 return $exe;
             }
         }
+
 
         //DELETE DATA
         public function DeleteData($tablename,$uid) {
