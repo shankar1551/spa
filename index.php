@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 
 <html lang="en">
+<?php 
+    include_once("./admin/database/connect.php");
+    include_once("./admin/database/endpoint.php");
 
+    $object = new query();
+
+    $slider = $object->RetriveData("slider");
+    $counter = $object->RetriveData("clients");
+    // $gallery = $object->RetriveData("");
+    $testimonial = $object->RetriveData("testimonials");
+    print_r($testimonial);
+
+?>
 
 <!-- Mirrored from thewebmax.com/spa/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Aug 2022 10:10:09 GMT -->
 <head>
@@ -19,7 +31,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
     
     <!-- PAGE TITLE HERE -->
-    <title>Spa Template | Home Page 1</title>
+    <title>Spa | Home Page </title>
     
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -160,10 +172,16 @@
             	<!-- START REVOLUTION SLIDER 5.4.1 fullscreen mode -->
                 <div id="rev_slider_1050_1" class="slider-dots rev_slider fullscreenbanner" style="display:none;" data-version="5.4.1">
                     <ul>	
+
+                    <?php
+                    $slide_counter =2938;
+                    foreach($slider as $item)
+                    {  ?>
+                             
                         <!-- SLIDE  -->
-                        <li data-index="rs-2938" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"   data-thumb="images/main-slider/slider2/slide1.jpg"  data-rotate="0"  data-fsslotamount="7" data-saveperformance="off"  data-title="" data-param1="Additional Text" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        <li data-index="rs-<?php echo $slide_counter;   ?>" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"   data-thumb="images/main-slider/slider2/slide1.jpg"  data-rotate="0"  data-fsslotamount="7" data-saveperformance="off"  data-title="" data-param1="Additional Text" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                             <!-- MAIN IMAGE -->
-                            <img src="images/main-slider/slider2/slide1.jpg" alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                            <img src="images/main-slider/slider2/<?php echo $item['image']?>" alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                             <!-- LAYERS -->
                            
                     
@@ -191,7 +209,7 @@
                                 style="z-index: 11;
                                 white-space: nowrap;
                                 text-transform:uppercase;">
-                                <div class="text-secondry"> Best Place  <span class="text-primary"> For you</span></div>
+                                <div class="text-secondry"> <?php echo $item['slider_text_1']?>  <span class="text-primary">  <?php echo $item['slider_text_2']?></span></div>
                                 </div>
                     
                             <!-- LAYER NR. 2 -->
@@ -221,7 +239,7 @@
                                	font-weight: 700;
                                 ">
                                 <div class="text-secondry">
-                                	<span class="text-primary">Harbal</span> Treatment
+                                	<span class="text-primary"><?php  echo $item['slider_text_3'];  ?></span> <?php  echo $item['slider_text_4'];  ?>
                                 </div>
                                 </div>
                     
@@ -247,7 +265,7 @@
                                 data-paddingleft="[0,0,0,0]"
                     
                                 style="z-index: 13; white-space: normal;">
-                                <div class="text-secondry"> Welcome to beauty lab, where you can relax and enjoy life. A little peace in a crazy world goes a long way.</div>
+                                <div class="text-secondry"> <?php  echo $item['slider_text_line'];  ?> ></div>
                                 </div>
                     
                             <!-- LAYER NR. 4 -->
@@ -305,296 +323,13 @@
                                </div>
                                                            
                         </li>
+                    <?php $slide_counter++; }?>
+
+
                         <!-- SLIDE  -->
-                        <li data-index="rs-2939" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/main-slider/slider2/slide2.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/main-slider/slider2/slide2.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-                            <!-- LAYERS -->
-                           
-                    
-                            <!-- LAYER NR. 1 -->
-                            <div class="tp-caption WebProduct-Title   tp-resizeme" 
-                                id="slide-2939-layer-01" 
-                                data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['-80','-80','200','130']" 
-                                data-fontsize="['57','55','55','45']"
-                                data-lineheight="['65','65','65','65']"
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                     
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                    
-                                data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                                data-textAlign="['left','left','left','left']"
-                                data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]"
-                                data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                    
-                                style="z-index: 11;
-                                white-space: nowrap;
-                                text-transform:uppercase;">
-                                <div class="text-secondry"> Best Place <span class="text-primary"> For You</span></div>
-                                </div>
-                    
-                            <!-- LAYER NR. 2 -->
-                            <div class="tp-caption WebProduct-SubTitle   tp-resizeme" 
-                                id="slide-2939-layer-02" 
-                                data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['0','0','280','180']" 
-                                data-fontsize="['55','55','55','45']"
-                                data-lineheight="['75','75','75','75']"
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                     
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                    
-                                data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1250,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                                data-textAlign="['left','left','left','left']"
-                                data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]"
-                                data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                    
-                                style="z-index: 12; 
-                                white-space: nowrap;
-                                text-transform:uppercase;
-                               	font-weight: 700;
-                                ">
-                                <div class="text-secondry">
-                                	<span class="text-primary">Beauty & </span> Relaxation
-                                </div>
-                                </div>
-                    
-                            <!-- LAYER NR. 3 -->
-                            <div class="tp-caption WebProduct-Content   tp-resizeme" 
-                                 id="slide-2939-layer-03" 
-                                 data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                 data-y="['middle','middle','top','top']" data-voffset="['80','80','380','250']" 
-                                data-fontsize="['21','21','24','18']"
-                                data-lineheight="['28','28','32','26']"
-                                data-width="['700','700','700','300']"
-                                data-height="['none','none','76','68']"
-                                data-whitespace="normal"
-                     
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                    
-                                data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1500,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                                data-textAlign="['left','left','left','left']"
-                                data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]"
-                                data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                    
-                                style="z-index: 13; white-space: normal;">
-                                <div class="text-secondry"> Welcome to beauty lab, where you can relax and enjoy life. A little peace in a crazy world goes a long way.</div>
-                                </div>
-                    
-                            <!-- LAYER NR. 4 -->
-                            <div class="tp-caption tp-resizeme" 
-                                id="slide-2939-layer-04" 
-                                data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['180','180','480','400']" 
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                     
-                                data-type="button" 
-                                data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-2939","delay":""}]'
-                                data-responsive_offset="on" 
-                                data-responsive="on"
-                                data-frames='[ 
-                                {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                                {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                                ]'
-                                data-textAlign="['left','left','left','left']"
-                                data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[40,40,40,40]"
-                                data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                    
-                                style="z-index:13; text-transform:uppercase; font-weight:700;">
-                               <a href="javascript:;" class="site-button radius-sm button-lg">See all Services</a>
-                               </div>
-                            <!-- LAYER NR. 5 -->
-                            
-                            <div class="tp-caption tp-resizeme" 
-                                id="slide-2939-layer-05" 
-                                data-x="['left','left','left','left']" data-hoffset="['240','240','200','200']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['180','180','480','400']" 
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                     
-                                data-type="button" 
-                                data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-2939","delay":""}]'
-                                data-responsive_offset="on" 
-                                data-responsive="on"
-                                data-frames='[ 
-                                {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                                {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                                ]'
-                                data-textAlign="['left','left','left','left']"
-                                data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]"
-                                data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[40,40,40,40]"
-                    
-                                style="z-index:13; text-transform:uppercase; font-weight:700;">
-                               <!-- <a href="javascript:;" class="site-button-secondry radius-sm button-lg">More detail</a> -->
-                               </div>
-                                                           
-                        </li>
+                        
                         <!-- SLIDE  -->
-                        <li data-index="rs-2940" id="rs-2940" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"   data-thumb="images/main-slider/slider2/slide3.jpg"  data-rotate="0"   data-fsslotamount="7" data-saveperformance="off"  data-title="" data-param1="Additional Text" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/main-slider/slider2/slide3.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-                            <!-- LAYERS -->
-                           
-                    
-                            <!-- LAYER NR. 1 -->
-                            <div class="tp-caption WebProduct-Title   tp-resizeme" 
-                                id="slide-2940-layer-01" 
-                                data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['-80','-80','200','130']" 
-                                data-fontsize="['57','55','55','45']"
-                                data-lineheight="['65','65','65','65']"
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                     
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                    
-                                data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                                data-textAlign="['left','left','left','left']"
-                                data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]"
-                                data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                    
-                                style="z-index: 11;
-                                white-space: nowrap;
-                                text-transform:uppercase;">
-                                <div class="text-secondry"> Beauty <span class="text-primary"> Means</span></div>
-                                </div>
-                    
-                            <!-- LAYER NR. 2 -->
-                            <div class="tp-caption WebProduct-SubTitle   tp-resizeme" 
-                                id="slide-2940-layer-02" 
-                                data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['0','0','280','180']" 
-                                data-fontsize="['55','55','55','45']"
-                                data-lineheight="['75','75','75','75']"
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                     
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                    
-                                data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1250,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                                data-textAlign="['left','left','left','left']"
-                                data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]"
-                                data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                    
-                                style="z-index: 12; 
-                                white-space: nowrap;
-                                text-transform:uppercase;
-                               	font-weight: 700;
-                                ">
-                                <div class="text-secondry">
-                                	<span class="text-primary">Healthy</span> You
-                                </div>
-                                </div>
-                    
-                            <!-- LAYER NR. 3 -->
-                            <div class="tp-caption WebProduct-Content   tp-resizeme" 
-                                 id="slide-2940-layer-03" 
-                                 data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                 data-y="['middle','middle','top','top']" data-voffset="['80','80','380','250']" 
-                                data-fontsize="['21','21','24','18']"
-                                data-lineheight="['28','28','32','26']"
-                                data-width="['700','700','700','300']"
-                                data-height="['none','none','76','68']"
-                                data-whitespace="normal"
-                     
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                    
-                                data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1500,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                                data-textAlign="['left','left','left','left']"
-                                data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]"
-                                data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                    
-                                style="z-index: 13; white-space: normal;">
-                                <div class="text-secondry"> Welcome to beauty lab, where you can relax and enjoy life. A little peace in a crazy world goes a long way.</div>
-                                </div>
-                    
-                            <!-- LAYER NR. 4 -->
-                            <div class="tp-caption tp-resizeme" 
-                                id="slide-2940-layer-04" 
-                                data-x="['left','left','left','left']" data-hoffset="['30','30','20','20']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['180','180','480','400']" 
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                     
-                                data-type="button" 
-                                data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-2939","delay":""}]'
-                                data-responsive_offset="on" 
-                                data-responsive="on"
-                                data-frames='[ 
-                                {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                                {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                                ]'
-                                data-textAlign="['left','left','left','left']"
-                                data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[40,40,40,40]"
-                                data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-                    
-                                style="z-index:13; text-transform:uppercase; font-weight:700;">
-                               <a href="javascript:;" class="site-button radius-sm button-lg">See all Services</a>
-                               </div>
-                            <!-- LAYER NR. 5 -->
-                            
-                            <div class="tp-caption tp-resizeme" 
-                                id="slide-2940-layer-05" 
-                                data-x="['left','left','left','left']" data-hoffset="['240','240','200','200']" 
-                                data-y="['middle','middle','top','top']" data-voffset="['180','180','480','400']" 
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                     
-                                data-type="button" 
-                                data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-2939","delay":""}]'
-                                data-responsive_offset="on" 
-                                data-responsive="on"
-                                data-frames='[ 
-                                {"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},
-                                {"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}
-                                ]'
-                                data-textAlign="['left','left','left','left']"
-                                data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]"
-                                data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[40,40,40,40]"
-                    
-                                style="z-index:13; text-transform:uppercase; font-weight:700;">
-                               <a href="javascript:;" class="site-button-secondry radius-sm button-lg">More detail</a>
-                               </div>
-                                                           
-                        </li>                                                
+                                                                        
                     </ul>
                     	
                 </div>
@@ -2087,7 +1822,7 @@
                                     <span class="flaticon-happy"></span>
                                 </span>
                                 <div class="icon-content">
-                                    <div><span class="counter" id="clients_counter"> 458 </span><b>+</b></div>
+                                    <div><span class="counter" id="clients_counter"><?php  echo $counter[0]['happy_clients'] ?> </span><b>+</b></div>
                                     <span class="text-uppercase" >Happy Clients</span>
                                 </div>
                             </div>
@@ -2099,7 +1834,7 @@
                                     <span class="flaticon-trophy"></span>
                                 </span>
                                 <div class="icon-content">
-                                    <div><span class="counter" > 698 </span><b>+</b></div>
+                                    <div><span class="counter" ><?php  echo $counter[0]['award'] ?> </span><b>+</b></div>
                                     <span class="text-uppercase">Win Awards</span>
                                 </div>
                             </div>
@@ -2111,7 +1846,7 @@
                                     <span class="flaticon-female-hairs"></span>
                                 </span>
                                 <div class="icon-content">
-                                    <div><span class="counter" > 894 </span><b>+</b></div>
+                                    <div><span class="counter" ><?php  echo $counter[0]['trainer'] ?></span><b>+</b></div>
                                     <span class="text-uppercase">Our Trainer</span>
                                 </div>
                             </div>
@@ -2123,7 +1858,7 @@
                                     <span class="flaticon-spray-bottle"></span>
                                 </span>
                                 <div class="icon-content">
-                                    <div><span class="counter"> 758 </span><b>+</b></div>
+                                    <div><span class="counter"><?php  echo $counter[0]['treatment'] ?> </span><b>+</b></div>
                                     <span class="text-uppercase">Treatments</span>
                                 </div>
                             </div>
@@ -2593,29 +2328,34 @@
                     <!-- TITLE END-->
                     <div class="section-content">
                         <div class="owl-carousel home-carousel-1">
+
+                        <?php
+                        foreach($testimonial as $single_testimonial){?>
                             <div class="item">
                                 <div class="testimonial-5 bg-white radius-sm">
                                 	<div class="testimonial-pic-block radius-bx"> 
                                     	<div class="testimonial-pic radius">
-                                        	<img src="images/testimonials/pic1.jpg" width="132" height="132" alt="">
+                                        	<img src="images/testimonials/<?php echo $single_testimonial['icon'] ?>" width="132" height="132" alt="">
                                         </div>
                                     </div>
                                     <div class="testimonial-text clearfix">
                                         <div class="testimonial-paragraph">
                                             <span class="fa fa-quote-left text-primary"></span>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                                  when an unknown printer took a galley of type and specimen book.
+                                            <p><?php   echo $single_testimonial['testimonial'] ?>
                                             </p>
                                         </div>
                                         <div class="testimonial-detail clearfix">
-                                            <strong class="testimonial-name">RINDA SMITH</strong>
-                                            <span class="testimonial-position text-primary p-t10">Founder</span>
+                                            <strong class="testimonial-name"><?php echo $single_testimonial['author']; ?>.</strong>
+                                            <span class="testimonial-position text-primary p-t10"> <?php echo $single_testimonial['designation']; ?> </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+
+                        <?php } ?>
+                        
+                        
+                            <!-- <div class="item">
                                 <div class=" testimonial-5 bg-white radius-sm">
                                 	<div class="testimonial-pic-block radius-bx"> 
                                     	<div class="testimonial-pic radius">
@@ -2680,7 +2420,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

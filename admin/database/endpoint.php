@@ -158,20 +158,20 @@
                 }
         }
 
-        public function GetHomePageInfo($tbllist)
-        {
-            $result = array();
-            foreach($tbllist as $item)
-            {
-                foreach($item as  $key=>$condi)
-                {
-                    if($key=="gallary_image") $temp_data = $this->retrieveDataWithLimit($key,$condi[0]);
-                    $temp_data = $this->RetriveData($key);
-                    $result[$key] = $temp_data;
-                }
-            }
-            return $result;
-        }
+        // public function GetHomePageInfo($tbllist)
+        // {
+        //     $result = array();
+        //     foreach($tbllist as $item)
+        //     {
+        //         foreach($item as  $key=>$condi)
+        //         {
+        //             if($key=="gallary_image") $temp_data = $this->retrieveDataWithLimit($key,$condi[0]);
+        //             $temp_data = $this->RetriveData($key);
+        //             $result[$key] = $temp_data;
+        //         }
+        //     }
+        //     return $result;
+        // }
 
     }
 ?>
