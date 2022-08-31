@@ -71,13 +71,13 @@
                                                 />
                                             </div>
                                         </td>
-                                        <td id="gallerymoment<?php echo $item['uid'] ?>">
+                                        <td id="gallerymoment<?php echo $item['id'] ?>">
                                             <?php echo $item['created_at']; ?>
                                         </td>
                                         <!-- SCRIPT FOR MOMENT JS -->
                                         <script>
                                             document.querySelector('#gallerymoment<?php echo $item['id'] ?>')
-                                            .innerText = moment(document.querySelector('#gallerymoment<?php echo $item['uid'] ?>')
+                                            .innerText = moment(document.querySelector('#gallerymoment<?php echo $item['id'] ?>')
                                             .innerText).fromNow();
                                         </script>
 
