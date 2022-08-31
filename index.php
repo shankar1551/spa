@@ -2114,10 +2114,9 @@
             <!-- OUR GALLERY CONTENT END  -->
             
             <!-- OUR PRICING TABLE SECTION START  -->
-            <div class="section-full bg-gray bg-repeat p-tb80" style="background-image:url(images/background/bg-6.jpg);">
+            <!-- <div class="section-full bg-gray bg-repeat p-tb80" style="background-image:url(images/background/bg-6.jpg);">
             		<div class="container">
                     
-                        <!-- TITLE START-->
                         <div class="section-head text-center">
                             <h1><span class="text-primary">Our</span> Pricing</h1>
                             <div class="wt-separator-outer ">
@@ -2129,7 +2128,6 @@
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit elit turpis, a porttitor tellus sollicitudin at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                         </div>
-                        <!-- TITLE END-->
                      
                         <div class="section-content">
                             <div class="pricingtable-row">
@@ -2239,13 +2237,12 @@
                         </div>
                     
                     </div>
-            </div>
+            </div> -->
             <!-- OUR PRICING TABLEL SECTION END  -->  
                        
             <!-- OUR PROJECTS SECTION START  -->
-            <div class="section-full bg-white p-tb80">
+            <!-- <div class="section-full bg-white p-tb80">
             	<div class="container">
-                    <!-- TITLE START-->
                     <div class="section-head text-center">
                         <h1><span class="text-primary">Our</span> Products</h1>
                         <div class="wt-separator-outer ">
@@ -2257,11 +2254,9 @@
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit elit turpis, a porttitor tellus sollicitudin at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
                     </div>
-                    <!-- TITLE END-->
                     <div class="section-content">
                         <div class="row">
                         
-                            <!-- COLUMNS 1 -->
                             <div class="col-md-4 col-sm-4 p-tb15">
                                 <div class="wt-box">
                                     <div class="wt-media text-primary m-b20 radius-bx circle-effect-1">
@@ -2274,7 +2269,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- COLUMNS 2 -->
                             <div class="col-md-4 col-sm-4 p-tb15">
                                 <div class="wt-box">
                                     <div class="wt-media text-primary m-b20 radius-bx circle-effect-1">
@@ -2287,7 +2281,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- COLUMNS 3 -->
                             <div class="col-md-4 col-sm-4 p-tb15">
                                 <div class="wt-box">
                                     <div class="wt-media text-primary m-b20 radius-bx circle-effect-1">
@@ -2300,13 +2293,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- COLUMNS 4 -->
                             
                             
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- OUR PROJECTS SECTION END  -->    
                     
             <!-- OUR TESTIMONIAL SECTION START  -->
@@ -2584,17 +2576,17 @@
                             <div class="widget widget_about">
                                 <h4 class="widget-title">About Company</h4>
                                 <div class="logo-footer clearfix p-b15">
-                                    <a href="index.html"><img src="images/logo.png" width="230" height="67" alt=""/></a>
+                                    <a href="index.html"><img src="images/footer-logo.png" width="230" height="67" alt=""/></a>
                                 </div>
-                                <p>Item ipsum dolor sit amet, consectetuer adipiscing elit,
+                                <p>Thewebmax ipsum dolor sit amet, consectetuer adipiscing elit,
                                       sed diam nonummy nibh euismod tincidunt ut laoreet dolore agna aliquam erat .   
                                       wisi enim ad minim veniam, quis tation. sit amet, consec tetuer.
-                                      ipsum dolor sit amet, consectetuer adipiscing.ipsum dolor sit [...]
+                                      ipsum dolor sit amet, consectetuer adipiscing.ipsum dolor sit .
                                 </p>  
                             </div>
                         </div> 
                         <!-- RESENT POST -->
-                        <div class="col-md-3 col-sm-6">
+                        <!-- <div class="col-md-3 col-sm-6">
                             <div class="widget recent-posts-entry-date">
                                 <h4 class="widget-title">Resent Post</h4>
                                 <div class="widget-post-bx">
@@ -2651,7 +2643,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>      
+                        </div>       -->
                         <!-- USEFUL LINKS -->
                         <div class="col-md-3 col-sm-6">
                             <div class="widget widget_services">
@@ -2695,6 +2687,57 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                    
+                       <div class="col-md-3 col-sm-6  p-tb20">
+                           <div class="wt-icon-box-wraper left  bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix">
+                                <div class="icon-md text-primary">
+                                    <span class="iconmoon-travel"></span>
+                                </div>
+                                <div class="icon-content">
+                                    <h5 class="wt-tilte text-uppercase m-b0">Address</h5>
+                                    <p>No.123 Chalingt Gates, Supper market New York</p>
+                                </div>
+                           </div>
+                        </div>
+                       <div class="col-md-3 col-sm-6  p-tb20 ">
+                           <div class="wt-icon-box-wraper left  bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix ">
+                                <div class="icon-md text-primary">
+                                    <span class="iconmoon-smartphone-1"></span>
+                                </div>
+                                <div class="icon-content">
+                                    <h5 class="wt-tilte text-uppercase m-b0">Phone</h5>
+                                    <p class="m-b0">+41 555 888 9585</p>
+                                    <p>+41 555 888 9585</p>
+                                </div>
+                           </div>
+                       </div>
+                       <div class="col-md-3 col-sm-6  p-tb20">
+                           <div class="wt-icon-box-wraper left  bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix">
+                                <div class="icon-md text-primary">
+                                    <span class="iconmoon-fax"></span>
+                                </div>
+                                <div class="icon-content">
+                                    <h5 class="wt-tilte text-uppercase m-b0">Fax</h5>
+                                    <p class="m-b0">FAX: (123) 123-4567</p>
+                                    <p>FAX: (123) 123-4567</p>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="col-md-3 col-sm-6 p-tb20">
+                           <div class="wt-icon-box-wraper left  bdr-1 bdr-gray-dark p-tb15 p-lr10 clearfix">
+                                <div class="icon-md text-primary">
+                                    <span class="iconmoon-email"></span>
+                                </div>
+                                <div class="icon-content">
+                                    <h5 class="wt-tilte text-uppercase m-b0">Email</h5>
+                                    <p class="m-b0">info@demo.com</p>
+                                    <p>info@demo1234.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                  </div>
                 </div>
             </div>
             <!-- FOOTER COPYRIGHT -->
@@ -2885,12 +2928,6 @@
                                 </div>
                                 <div class="wt-divider bg-gray-dark"><i class="icon-dot c-square"></i></div>
                             </div>
-
-
-
-
-
-
 <!-- =======MODEL END======== -->
 
 </body>

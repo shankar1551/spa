@@ -38,7 +38,6 @@ async function addMessage() {
   }
 
   
-
 document.querySelector("#contact_form").addEventListener("submit", (e) => {
   e.preventDefault();
   addMessage();

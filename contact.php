@@ -207,25 +207,25 @@
                                           <div class="form-group">
                                               <div class="input-group">
                                                   <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                                  <input id="contact_username" name="username" type="text" required class="form-control" placeholder="Neme">
+                                                  <input id="name" name="name" type="text" required class="form-control" placeholder="Neme">
                                               </div>
                                           </div>
                                           <div class="form-group">
                                               <div class="input-group">
                                                   <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                                  <input name="email" id="contact_email" type="text" class="form-control" required placeholder="Email">
+                                                  <input name="email" id="email" type="text" class="form-control" required placeholder="Email">
                                               </div>
                                           </div>
                                           <div class="form-group">
                                               <div class="input-group">
                                                   <span class="input-group-addon"><i class="fa fa-book"></i></span>
-                                                  <input name="phone" id="contact_phone" type="text" class="form-control" required placeholder="Phone">
+                                                  <input name="phone" id="phone" type="text" class="form-control" required placeholder="Phone">
                                               </div>
                                           </div>
                                           <div class="form-group">
                                               <div class="input-group">
                                                   <span class="input-group-addon v-align-t"><i class="fa fa-pencil"></i></span>
-                                                  <textarea name="message" id="contact_message" class="form-control" rows="4" placeholder="Message"></textarea>
+                                                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message"></textarea>
                                               </div>
                                           </div>
                                           <button type="submit" class="site-button skew-icon-btn radius-sm">
@@ -338,7 +338,7 @@
                             </div>
                         </div> 
                         <!-- RESENT POST -->
-                        <div class="col-md-3 col-sm-6">
+                        <!-- <div class="col-md-3 col-sm-6">
                             <div class="widget recent-posts-entry-date">
                                 <h4 class="widget-title">Resent Post</h4>
                                 <div class="widget-post-bx">
@@ -395,7 +395,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>      
+                        </div>       -->
                         <!-- USEFUL LINKS -->
                         <div class="col-md-3 col-sm-6">
                             <div class="widget widget_services">
@@ -536,7 +536,8 @@
 <!-- JAVASCRIPT  FILES ========================================= --> 
 
 <!-- users js -->
-<script src="./js/custom/contact.js"></script>
+<script src="./js/custom/contact.js" defer></script>
+
 <script   src="js/jquery-1.12.4.min.js"></script><!-- JQUERY.MIN JS -->
 <script   src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
 
@@ -647,6 +648,35 @@
 
 
  
+<!-- =========MODEL========== -->
+                            <div class="m-b30">
+                                <!-- <h4 class="text-uppercase m-b20 m-t50">Default Modal</h4>  -->
+                                 
+                                <!-- TRIGGER THE MODAL WITH A BUTTON -->
+                                <button style="display:none" id="model_btn" type="button" class="site-button  m-r15" data-toggle="modal" data-target="#Default-Modal">Default Modal  <i class="fa fa-angle-double-right"></i></button>
+                                <!-- MODAL -->
+                                <div id="Default-Modal" class="modal fade" role="dialog">
+                                  <div class="modal-dialog">
+                                    <!-- MODAL CONTENT-->
+                                    <div class="modal-content">
+                                      <div class="modal-header bg-primary">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title text-white">Success</h4>
+                                      </div>
+                                      <div class="modal-body">
+                                        <p>Your Feedback is Successfully Received. Thank You!</p>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="site-button " data-dismiss="modal">Close
+                                         <i class="fa fa-angle-double-right"></i></button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="wt-divider bg-gray-dark"><i class="icon-dot c-square"></i></div>
+                            </div>
+<!-- =======MODEL END======== -->
+
 
 
 </body>

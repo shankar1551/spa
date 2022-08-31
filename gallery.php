@@ -445,7 +445,7 @@
                             </div>
                         </div> 
                         <!-- RESENT POST -->
-                        <div class="col-md-3 col-sm-6">
+                        <!-- <div class="col-md-3 col-sm-6">
                             <div class="widget recent-posts-entry-date">
                                 <h4 class="widget-title">Resent Post</h4>
                                 <div class="widget-post-bx">
@@ -502,7 +502,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>      
+                        </div>       -->
                         <!-- USEFUL LINKS -->
                         <div class="col-md-3 col-sm-6">
                             <div class="widget widget_services">
