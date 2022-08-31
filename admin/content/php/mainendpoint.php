@@ -66,8 +66,7 @@
                 $counter++;
             }
 
-            $query .= ",inserted = NOW() WHERE uid = '$uid'";
-            
+            $query .= ",created_at = NOW() WHERE id = '$uid'";
             $exe = $this->connect()->query($query);
 
             return $exe;
@@ -79,7 +78,7 @@
                 $random = rand();
                 $count = count($array);
                 $counter = 1;
-                $query = "INSERT INTO $tablename VALUES(NULL,'$random',";
+                $query = "INSERT INTO $tablename VALUES(NULL,";
                 foreach($array as $key=>$value) {
                     if($count == $counter) {
                         $query .= "'$value', NOW())";
@@ -98,7 +97,7 @@
         //DELETE DATA
         public function DeleteData($tablename,$uid) {
             if(isset($tablename) && isset($uid)) {
-                $query = "DELETE FROM $tablename WHERE uid='$uid'";
+                $query = "DELETE FROM $tablename WHERE id='$uid'";
                 $exe = $this->connect()->query($query);
 
                 return $exe;

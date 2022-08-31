@@ -2,6 +2,14 @@
 
 <html lang="en">
 
+<?php 
+    include_once("./admin/database/connect.php");
+    include_once("./admin/database/endpoint.php");
+
+    $object = new query();
+    $counter = $object->RetriveData('clients');
+
+?>
 
 <!-- Mirrored from thewebmax.com/spa/about-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Aug 2022 10:11:30 GMT -->
 <head>
@@ -19,7 +27,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
     
     <!-- PAGE TITLE HERE -->
-    <title>Spa Template | About page 1</title>
+    <title>Spa  | About page </title>
     
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -158,7 +166,7 @@
                 <div class="overlay-main bg-black opacity-07"></div>
                 <div class="container">
                     <div class="wt-bnr-inr-entry">
-                        <h1 class="text-white">About 1</h1>
+                        <h1 class="text-white">About Us</h1>
                     </div>
                 </div>
             </div>
@@ -169,7 +177,7 @@
                 <div class="container">
                     <ul class="wt-breadcrumb breadcrumb-style-2">
                         <li><a href="javascript:void(0);"><i class="fa fa-home"></i> Home</a></li>
-                        <li>About 1</li>
+                        <li>About </li>
                     </ul>
                 </div>
             </div>
@@ -256,66 +264,62 @@
                 <!-- ABOUT COMPANY SECTION END --> 
                  
                 <!--COUNTER SECTION START -->
-                <div class="section-full p-t30 bg-primary">
-                    
-                    <div class="container">
-                        <!-- COUNTER BLOCKS START -->    
-                        <div class="section-content">
-                            <div class="row">
-                                
-                            <div class="col-md-3 col-sm-6">
-                            	<div class="wt-icon-box-wraper right p-a10 text-white m-b30">
-                                    <span class="icon-md p-t10">
-                                        <i class="fa fa-building"></i>
-                                    </span>
-                                    <div class="icon-content">
-                                        <div class="font-26 font-weight-800  m-b5"><span class="counter">1000</span><b>+</b></div>
-                                        <span class="text-uppercase">Happy Clients</span>
-                                    </div>
+                <div class="section-full overlay-wraper bg-center bg-cover p-tb80 bg-primary"  style="background-image:url(images/background/bg-9.jpg);">
+            	<div class="overlay-main bg-primary opacity-09"></div>
+            	<div class="container summary-counter">
+                    <div class="row">
+                    	<!-- COLUMNS 1 -->
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc">
+                            <div class="wt-icon-box-wraper left p-a10 text-white">
+                                <span class="icon-md">
+                                    <span class="flaticon-happy"></span>
+                                </span>
+                                <div class="icon-content">
+                                    <div><span class="counter" id="clients_counter"><?php  echo $counter[0]['happy_clients'] ?> </span><b>+</b></div>
+                                    <span class="text-uppercase" >Happy Clients</span>
                                 </div>
                             </div>
-                            
-                            <div class="col-md-3 col-sm-6">
-                                <div class="wt-icon-box-wraper right p-a10 text-white m-b30">
-                                    <span class="icon-md p-t10">
-                                    	<i class="fa fa-users"></i>
-                                    </span>
-                                    <div class="icon-content">
-                                        <div class="font-26 font-weight-800  m-b5"><span class="counter">1500</span><b>+</b></div>
-                                        <span>HAPPY CLIENTS</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-3 col-sm-6">
-                                <div class="wt-icon-box-wraper right p-a10 text-white m-b30">
-                                    <span class="icon-md p-t10">
-                                    	<i class="fa fa-user-plus"></i>
-                                    </span>
-                                    <div class="icon-content">
-                                        <div class="counter font-26 font-weight-800 m-b5">4500</div>
-                                        <span>WORKERS EMPLOYED</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-3 col-sm-6">
-                                <div class="wt-icon-box-wraper right p-a10 text-white m-b30">
-                                    <span class="icon-md p-t10">
-                                    	<i class="fa fa-trophy"></i>
-                                    </span>
-                                    <div class="icon-content">
-                                        <div class="counter font-26 font-weight-800 m-b5">260</div>
-                                        <span>AWARDS WON</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
                         </div>
+                        <!-- COLUMNS 2 -->
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc">
+                            <div class="wt-icon-box-wraper left p-a10 text-white">
+                                <span class="icon-md">
+                                    <span class="flaticon-trophy"></span>
+                                </span>
+                                <div class="icon-content">
+                                    <div><span class="counter" ><?php  echo $counter[0]['award'] ?> </span><b>+</b></div>
+                                    <span class="text-uppercase">Win Awards</span>
+                                </div>
+                            </div>
                         </div>
-                        <!-- COUNTER BLOCKS START -->
+                        <!-- COLUMNS 3 -->
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc">
+                            <div class="wt-icon-box-wraper left p-a10 text-white">
+                                <span class="icon-md">
+                                    <span class="flaticon-female-hairs"></span>
+                                </span>
+                                <div class="icon-content">
+                                    <div><span class="counter" ><?php  echo $counter[0]['trainer'] ?></span><b>+</b></div>
+                                    <span class="text-uppercase">Our Trainer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- COLUMNS 4 -->
+                        <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc">
+                            <div class="wt-icon-box-wraper left p-a10 text-white">
+                                <span class="icon-md">
+                                    <span class="flaticon-spray-bottle"></span>
+                                </span>
+                                <div class="icon-content">
+                                    <div><span class="counter"><?php  echo $counter[0]['treatment'] ?> </span><b>+</b></div>
+                                    <span class="text-uppercase">Treatments</span>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
+            </div>
                 <!-- COUNTER SECTION END -->
                                                
                 <!-- OUR BEST SERVICES SECTION  START-->                  

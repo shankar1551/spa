@@ -12,7 +12,7 @@
         unlink($one);
 
         $delete = new query(); //CALLING CLASS
-        $result3 = $delete->DeleteData('gallery', $filteredId); //SENDING DYNAMIC PARAMETERS
+        $result3 = $delete->DeleteData('gallery_image', $filteredId); //SENDING DYNAMIC PARAMETERS
 
         if($result3 == 1) { //CONCLUDING THE RESULT
             ?>

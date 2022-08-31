@@ -7,11 +7,10 @@
 
     $object = new query();
 
-    $slider = $object->RetriveData("slider");
+    $slider = $object->RetrieveDataWithLimit("slider",3);
     $counter = $object->RetriveData("clients");
-    // $gallery = $object->RetriveData("");
-    $testimonial = $object->RetriveData("testimonials");
-
+    $gallery = $object->RetrieveDataWithLimit("gallery_image",8);
+    $testimonial = $object->RetrieveDataWithLimit("testimonials",4);
 ?>
 
 <!-- Mirrored from thewebmax.com/spa/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 22 Aug 2022 10:10:09 GMT -->
@@ -180,7 +179,7 @@
                         <!-- SLIDE  -->
                         <li data-index="rs-<?php echo $slide_counter;   ?>" data-transition="slideleft" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"   data-thumb="images/main-slider/slider2/slide1.jpg"  data-rotate="0"  data-fsslotamount="7" data-saveperformance="off"  data-title="" data-param1="Additional Text" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                             <!-- MAIN IMAGE -->
-                            <img src="images/main-slider/slider2/<?php echo $item['image']?>" alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                            <img src="./admin/content/assets/img/slider/<?php echo $item['image']?>" alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
                             <!-- LAYERS -->
                            
                     
@@ -1920,7 +1919,7 @@
                      <!-- TITLE END-->
                                               
                      <!-- PAGINATION START -->
-                    <div class="filter-wrap p-a15 our-gallery  m-tb30">
+                    <!-- <div class="filter-wrap p-a15 our-gallery  m-tb30">
                         <ul class="masonry-filter link-style  text-uppercase center-block m-t0">
                             <li class="active"><a data-filter="*" href="#">All</a></li>
                             <li><a data-filter=".cat-filter-1" href="#">Hair cut</a></li>
@@ -1929,7 +1928,7 @@
                             <li><a data-filter=".cat-filter-4" href="#">Massage</a></li>
                             <li><a data-filter=".cat-filter-5" href="#">Face massage</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                     <!-- PAGINATION END -->
                     
                  </div>
@@ -1937,12 +1936,14 @@
                  <div class="portfolio-wrap mfp-gallery no-col-gap clearfix">
                      <div class="container-fluid">
                  	      <div class="row">
+                            
+                          <?php foreach($gallery  as $item) { ?>
                                 <!-- COLUMNS 1 -->
                                 <div class="masonry-item cat-filter-1 col-lg-3 col-md-4 col-sm-6">
                                     <div class="flip-container">
                                         <div class="wt-box">
                                             <div class="wt-thum-bx">
-                                                <img src="images/gallery/pic1.jpg" alt="">	
+                                                <img src="./admin/content/assets/img/gallery/<?php echo $item['image']; ?>" alt="">	
                                             </div>
                                             <div class="wt-info bg-white text-center bdr-5 bdr-primary">
                                                 <div class="wt-info-media-zoom">
@@ -1951,160 +1952,15 @@
                                                     </a>
                                                 </div>
                                                 <div class="wt-info-text p-a30">
-                                                    <h3>Back Massage</h3>
-                                                    <p>Lorem Khaled Ipsum is a major key to success. Put it this way, it took me twenty five years to get these plants.</p>
+                                                    <h3><?php  echo $item['title'] ?></h3>
+                                                    <p><?php  echo $item['remark'] ?></p>
                                                 </div>
                                              </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- COLUMNS 2 -->
-                                <div class="masonry-item cat-filter-2 col-lg-3 col-md-4 col-sm-6">
-                                    <div class="flip-container">
-                                        <div class="wt-box">
-                                            <div class="wt-thum-bx">
-                                                <img src="images/gallery/pic2.jpg" alt="">	
-                                            </div>
-                                            <div class="wt-info bg-white text-center bdr-5 bdr-primary">
-                                                <div class="wt-info-media-zoom">
-                                                    <a href="images/latest-projects/large/pic2.jpg"  class="mfp-link">
-                                                        <i class="fa fa-arrows-alt font-24 p-a10"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="wt-info-text p-a30">
-                                                    <h3>Head Massage </h3>
-                                                    <p>Lorem Khaled Ipsum is a major key to success. Put it this way, it took me twenty five years to get these plants.</p>
-                                                </div>
-                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- COLUMNS 3 -->
-                                <div class="masonry-item cat-filter-3  col-lg-3 col-md-4 col-sm-6">
-                                    <div class="flip-container">
-                                        <div class="wt-box">
-                                            <div class="wt-thum-bx">
-                                                <img src="images/gallery/pic3.jpg" alt="">	
-                                            </div>
-                                            <div class="wt-info bg-white text-center bdr-5 bdr-primary">
-                                                <div class="wt-info-media-zoom">
-                                                    <a href="images/latest-projects/large/pic3.jpg"  class="mfp-link">
-                                                        <i class="fa fa-arrows-alt font-24 p-a10"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="wt-info-text p-a30">
-                                                    <h3>Body Scrub</h3>
-                                                    <p>Lorem Khaled Ipsum is a major key to success. Put it this way, it took me twenty five years to get these plants.</p>
-                                                </div>
-                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- COLUMNS 4 -->
-                                <div class="masonry-item cat-filter-4 col-lg-3 col-md-4 col-sm-6">
-                                    <div class="flip-container">
-                                        <div class="wt-box">
-                                            <div class="wt-thum-bx">
-                                                <img src="images/gallery/pic4.jpg" alt="">	
-                                            </div>
-                                            <div class="wt-info bg-white text-center bdr-5 bdr-primary">
-                                                <div class="wt-info-media-zoom">
-                                                    <a href="images/latest-projects/large/pic4.jpg"  class="mfp-link">
-                                                        <i class="fa fa-arrows-alt font-24 p-a10"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="wt-info-text p-a30">
-                                                    <h3>Aromatherapy Massage</h3>
-                                                    <p>Lorem Khaled Ipsum is a major key to success. Put it this way, it took me twenty five years to get these plants.</p>
-                                                </div>
-                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- COLUMNS 5 -->
-                                <div class="masonry-item cat-filter-5 col-lg-3 col-md-4 col-sm-6">
-                                    <div class="flip-container">
-                                        <div class="wt-box">
-                                            <div class="wt-thum-bx">
-                                                <img src="images/gallery/pic5.jpg" alt="">	
-                                            </div>
-                                            <div class="wt-info bg-white text-center bdr-5 bdr-primary">
-                                                <div class="wt-info-media-zoom">
-                                                    <a href="images/latest-projects/large/pic5.jpg"  class="mfp-link">
-                                                        <i class="fa fa-arrows-alt font-24 p-a10"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="wt-info-text p-a30">
-                                                    <h3>Aromatherapy Massage</h3>
-                                                    <p>Lorem Khaled Ipsum is a major key to success. Put it this way, it took me twenty five years to get these plants.</p>
-                                                </div>
-                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- COLUMNS 6 -->
-                                <div class="masonry-item cat-filter-3 col-lg-3 col-md-4 col-sm-6">
-                                    <div class="flip-container">
-                                        <div class="wt-box">
-                                            <div class="wt-thum-bx">
-                                                <img src="images/gallery/pic6.jpg" alt="">	
-                                            </div>
-                                            <div class="wt-info bg-white text-center bdr-5 bdr-primary">
-                                                <div class="wt-info-media-zoom">
-                                                    <a href="images/latest-projects/large/pic6.jpg"  class="mfp-link">
-                                                        <i class="fa fa-arrows-alt font-24 p-a10"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="wt-info-text p-a30">
-                                                    <h3>Massages & Body</h3>
-                                                    <p>Lorem Khaled Ipsum is a major key to success. Put it this way, it took me twenty five years to get these plants.</p>
-                                                </div>
-                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- COLUMNS 7 -->
-                                <div class="masonry-item cat-filter-2 col-lg-3 col-md-4 col-sm-6">
-                                    <div class="flip-container">
-                                        <div class="wt-box">
-                                            <div class="wt-thum-bx">
-                                                <img src="images/gallery/pic7.jpg" alt="">	
-                                            </div>
-                                            <div class="wt-info bg-white text-center bdr-5 bdr-primary">
-                                                <div class="wt-info-media-zoom">
-                                                    <a href="images/latest-projects/large/pic7.jpg"  class="mfp-link">
-                                                        <i class="fa fa-arrows-alt font-24 p-a10"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="wt-info-text p-a30">
-                                                    <h3>Beauty Spa</h3>
-                                                    <p>Lorem Khaled Ipsum is a major key to success. Put it this way, it took me twenty five years to get these plants.</p>
-                                                </div>
-                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- COLUMNS 8 -->
-                                <div class="masonry-item cat-filter-1 col-lg-3 col-md-4 col-sm-6">
-                                    <div class="flip-container">
-                                        <div class="wt-box">
-                                            <div class="wt-thum-bx">
-                                                <img src="images/gallery/pic8.jpg" alt="">	
-                                            </div>
-                                            <div class="wt-info bg-white text-center bdr-5 bdr-primary">
-                                                <div class="wt-info-media-zoom">
-                                                    <a href="images/latest-projects/large/pic8.jpg"  class="mfp-link">
-                                                        <i class="fa fa-arrows-alt font-24 p-a10"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="wt-info-text p-a30">
-                                                    <h3>Facial Spa</h3>
-                                                    <p>Lorem Khaled Ipsum is a major key to success. Put it this way, it took me twenty five years to get these plants.</p>
-                                                </div>
-                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
+                               <?php } ?>
+   
                             </div>
             			</div>
                  </div>

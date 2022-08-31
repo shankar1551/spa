@@ -9,10 +9,10 @@
     <?php
   }else {
 
-    
     include('./database/connect.php'); //CONNECTION
-    include('./auth/login.php'); //ENDPOINT
-    include('./auth/authendpoint.php'); //LOGIN
+    include('./auth/authendpoint.php'); //ENDPOINT
+
+    include('./auth/login.php'); //LOGIN
 
 
   ?>

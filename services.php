@@ -158,7 +158,7 @@
             	<div class="overlay-main bg-black opacity-07"></div>
                 <div class="container">
                     <div class="wt-bnr-inr-entry">
-                        <h1 class="text-white">Services 2</h1>
+                        <h1 class="text-white">Our Services </h1>
                     </div>
                 </div>
             </div>
@@ -169,7 +169,7 @@
             	<div class="container">
                     <ul class="wt-breadcrumb breadcrumb-style-2">
                         <li><a href="javascript:void(0);"><i class="fa fa-home"></i> Home</a></li>
-                        <li>Services 2</li>
+                        <li>Services </li>
                     </ul>
                 </div>
             </div>

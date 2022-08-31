@@ -32,7 +32,6 @@
 
                
                     <?php
-                    
                         if(count($allslider) > 0) {
                             $counter = 1;
                             $allslider = array_reverse($allslider);
@@ -100,6 +99,11 @@
                     </div>
                     <form method="post" class="modal-body mt-2 mb-3" enctype="multipart/form-data">
                         <input name="slider" type="file" class="slider w-100 mb-5" required>
+                        <input  type="text" name="text_1" class="slider w-100 mb-5" placeholder="Text 1" required>
+                        <input type="text" name="text_2" class="slider w-100 mb-5" placeholder="Text 2" required>
+                        <input type="text" name="text_3" class="slider w-100 mb-5" placeholder="Text 3" required>
+                        <input type="text" name="text_4" class="slider w-100 mb-5" placeholder="Text 4" required>
+                        <input type="text" name="text_5" class="slider w-100 mb-5" placeholder="Slider Line" required>
                         <button name="sliderbtn" class="w-100 btn btn-md">Insert</button>
                     </form>
                 </div>

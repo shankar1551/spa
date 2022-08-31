@@ -124,18 +124,18 @@
             return $uploading;
         }
 
-        public function retrieveDataWithLimit($tablename,$limit=null,$array = null)
+        public function RetrieveDataWithLimit($tablename,$limit=null,$array = null)
         {
                 if(isset($tablename)) {
                     if($array === null) {
-                        $query = "SELECT * FROM $tablename ORDER BY id DESC";
+                        $query = "SELECT * FROM $tablename ORDER BY id DESC LIMIT $limit";
                     }else {
                         $totalFields = count($array);
                         $query = "SELECT * FROM $tablename WHERE ";
                         $counter = 1;
                         foreach($array as $fieldname=>$value) {
                             if($totalFields == $counter) {
-                                $query .= "$fieldname = '$value' ORDER BY id DESC";
+                                $query .= "$fieldname = '$value' ORDER BY id DESC LIMIT $limit";
                             }else {
                                 $query .= "$fieldname = '$value' AND ";
                             }

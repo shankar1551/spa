@@ -28,7 +28,6 @@
                 </thead>
                 <tbody>
                     <?php
-                        print_r($allgallery);
                         if(count($allgallery) > 0) {
                             $counter = 1;
                             $allgallery = array_reverse($allgallery);
@@ -98,7 +97,7 @@
                                                         <div class="modal-body">
                                                             <input name="title" type="text" class="gallery w-100 mb-3" value="<?php echo $item['title']; ?>">
                                                             <input name="remark" type="text" class="gallery w-100 mb-3" value="<?php echo $item['remark']; ?>">
-                                                            <input name="uid" type="text" value="<?php echo $item['id']; ?>" style="display:none;">
+                                                            <input name="id" type="text" value="<?php echo $item['id']; ?>" style="display:none;">
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button name="updategallerybtn" class="gallery float-right btn btn-md">Update</button>

@@ -6,13 +6,9 @@
         <?php 
             include("./components/pages/page1.php");
             include("./components/pages/page2.php");
-            include("./components/pages/page5.php"); 
-            include("./components/pages/page7.php"); 
+            include("./components/pages/page3.php"); 
             include("./components/pages/page4.php"); 
-            // include("./components/pages/page6.php"); 
-            // include("./components/pages/page7.php"); 
-            // include("./components/pages/page8.php"); 
-            // include("./components/pages/page9.php"); 
+            include("./components/pages/page5.php"); 
         ?>
     </div>
 </div>

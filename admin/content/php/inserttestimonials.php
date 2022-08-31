@@ -20,7 +20,7 @@
         $fileUploadResult = $obj->UploadFile($filenewname,$filetempname,$filedestination); // UPLOADING FILE
 
         if($fileUploadResult == 1) {
-            $array = array('name' => $name, 'position' => $position, 'image' => $filenewname, 'review' => $review);
+            $array = array('author' => $name,'icon' => $filenewname,'testimonial' => $review, 'designation' => $position);
             $result2 = $obj->InsertData('testimonials',$array); // SENDING DYNAMIC PARAMETERS
           
             if($result2 == 1) { //CONCLUDING THE RESULT

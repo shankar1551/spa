@@ -1,4 +1,4 @@
 <?php
     $viewgallery = new query();
-    $allgallery = $viewgallery->RetriveData('gallary_image');
+    $allgallery = $viewgallery->RetriveData('gallery_image');
 ?>

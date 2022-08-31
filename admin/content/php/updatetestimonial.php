@@ -6,9 +6,9 @@
         $name = $obj->filterString($_POST['name']);
         $position = $obj->filterString($_POST['position']);
         $testimonial = $obj->filterString($_POST['testimonial']);
-        $uid = $obj->filterString($_POST['uid']);
+        $uid = $obj->filterString($_POST['id']);
 
-        $array = array('name'=>$name,'position' => $position, 'review' => $testimonial);
+        $array = array('author'=>$name,'designation' => $position, 'testimonial' => $testimonial);
         $result2 = $obj->UpdateTable('testimonials',$array, $uid); // SENDING DYNAMIC PARAMETERS
         
         if($result2 == 1) { //CONCLUDING THE RESULT

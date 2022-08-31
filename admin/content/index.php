@@ -1,12 +1,12 @@
 <?php
   session_start();
-  // if(!isset($_SESSION['ipvx-bmc-username'])) {
+  if(!isset($_SESSION['ipvx-bmc-username'])) {
     ?>
-      <!-- <script>
+      <script>
         window.open('../index.php',"_self");
-      </script> -->
+      </script>
     <?php
-  // }else {
+  }else {
 
     include('../database/connect.php'); //CONNECTION
     include('./php/mainendpoint.php'); //ENDPOINT
@@ -19,7 +19,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="./assets/img/logo.png" />
-        <title>Butwal Model College | Content Management System | Dashboard</title>
+        <title>Spa | Content Management System | Dashboard</title>
 
         <!-- ONLINE LINKS -->
         <?php include("./links.php"); ?>
@@ -44,5 +44,5 @@
         </body>
         </html>
     <?php
-  // }
+  }
 ?>

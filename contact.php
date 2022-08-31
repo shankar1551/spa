@@ -19,7 +19,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
     
     <!-- PAGE TITLE HERE -->
-    <title>Spa Template | Contact</title>
+    <title>Spa | Contact</title>
     
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">

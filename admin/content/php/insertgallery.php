@@ -19,8 +19,8 @@
         $fileUploadResult = $obj->UploadFile($filenewname,$filetempname,$filedestination); // UPLOADING FILE
 
         if($fileUploadResult == 1) {
-            $array = array('title' => $title, 'remark' => $remark, 'image' => $filenewname);
-            $result2 = $obj->InsertData('gallery',$array); // SENDING DYNAMIC PARAMETERS
+            $array = array('title' => $title, 'remark' => $remark,'category'=>'default', 'image' => $filenewname);
+            $result2 = $obj->InsertData('gallery_image',$array); // SENDING DYNAMIC PARAMETERS
           
             if($result2 == 1) { //CONCLUDING THE RESULT
                 ?>
