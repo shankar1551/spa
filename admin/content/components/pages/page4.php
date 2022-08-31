@@ -28,6 +28,7 @@
                 </thead>
                 <tbody>
                     <?php
+                        print_r($allgallery);
                         if(count($allgallery) > 0) {
                             $counter = 1;
                             $allgallery = array_reverse($allgallery);
@@ -38,12 +39,12 @@
                                         <td><?php echo $item['title']; ?></td>
 
                                         <td>    
-                                            <span class="btn btn-sm btn-info" data-toggle="modal" data-target="#showgallery<?php echo $item['uid'] ?>">
+                                            <span class="btn btn-sm btn-info" data-toggle="modal" data-target="#showgallery<?php echo $item['id'] ?>">
                                                 <i class="fas fa-eye"></i>
                                             </span> 
                                         </td>
                                         <!-- DETAILS MODAL -->
-                                        <div class="modal fade" id="showgallery<?php echo $item['uid'] ?>" tabindex="1" role="dialog" aria-hidden="true">
+                                        <div class="modal fade" id="showgallery<?php echo $item['id'] ?>" tabindex="1" role="dialog" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -71,21 +72,21 @@
                                             </div>
                                         </td>
                                         <td id="gallerymoment<?php echo $item['uid'] ?>">
-                                            <?php echo $item['inserted']; ?>
+                                            <?php echo $item['created_at']; ?>
                                         </td>
                                         <!-- SCRIPT FOR MOMENT JS -->
                                         <script>
-                                            document.querySelector('#gallerymoment<?php echo $item['uid'] ?>')
+                                            document.querySelector('#gallerymoment<?php echo $item['id'] ?>')
                                             .innerText = moment(document.querySelector('#gallerymoment<?php echo $item['uid'] ?>')
                                             .innerText).fromNow();
                                         </script>
 
                                         <td>
-                                            <button data-toggle="modal" data-target="#editgallery<?php echo $item['uid']; ?>" class="btn btn-sm btn-info"><i class="fas fa-pen"></i></button>
-                                            <button data-toggle="modal" data-target="#deletegallery<?php echo $item['uid']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                            <button data-toggle="modal" data-target="#editgallery<?php echo $item['id']; ?>" class="btn btn-sm btn-info"><i class="fas fa-pen"></i></button>
+                                            <button data-toggle="modal" data-target="#deletegallery<?php echo $item['id']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
                                         </td>
                                         <!-- UPDATE MODAL -->
-                                        <div class="modal fade editgallery" id="editgallery<?php echo $item['uid'] ?>" tabindex="1" role="dialog" aria-hidden="true">
+                                        <div class="modal fade editgallery" id="editgallery<?php echo $item['id'] ?>" tabindex="1" role="dialog" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <form method="post">
@@ -97,7 +98,7 @@
                                                         <div class="modal-body">
                                                             <input name="title" type="text" class="gallery w-100 mb-3" value="<?php echo $item['title']; ?>">
                                                             <input name="remark" type="text" class="gallery w-100 mb-3" value="<?php echo $item['remark']; ?>">
-                                                            <input name="uid" type="text" value="<?php echo $item['uid']; ?>" style="display:none;">
+                                                            <input name="uid" type="text" value="<?php echo $item['id']; ?>" style="display:none;">
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button name="updategallerybtn" class="gallery float-right btn btn-md">Update</button>
@@ -107,7 +108,7 @@
                                             </div>
                                         </div>
                                         <!-- DELETE MODAL -->
-                                        <div class="modal fade" id="deletegallery<?php echo $item['uid'] ?>" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="deletegallery<?php echo $item['id'] ?>" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-body">
@@ -119,7 +120,7 @@
                                                         </p>
                                                         <form method="post">
                                                             <p class="text-right">
-                                                                <input type="text" name="uid" value="<?php echo $item['uid']; ?>" style="display:none" required>
+                                                                <input type="text" name="uid" value="<?php echo $item['id']; ?>" style="display:none" required>
                                                                 <input type="text" name="image" value="<?php echo $item['image']; ?>" style="display:none" required>
                                                                 <button name="gallerydelbtn" class="btn btn-md btn-danger text-white"><i class="fas fa-trash-alt"></i></button>
                                                             </p>

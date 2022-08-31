@@ -1,14 +1,14 @@
 <?php
   session_start();
-  if(!isset($_SESSION['ipvx-bmc-username'])) {
+  // if(!isset($_SESSION['ipvx-bmc-username'])) {
     ?>
-      <script>
+      <!-- <script>
         window.open('../index.php',"_self");
-      </script>
+      </script> -->
     <?php
-  }else {
+  // }else {
 
-    include('../php/connect.php'); //CONNECTION
+    include('../database/connect.php'); //CONNECTION
     include('./php/mainendpoint.php'); //ENDPOINT
     include('./backup/php/backup.php'); //ENDPOINT
     ?>
@@ -44,5 +44,5 @@
         </body>
         </html>
     <?php
-  }
+  // }
 ?>

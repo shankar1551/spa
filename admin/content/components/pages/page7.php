@@ -16,6 +16,7 @@
                         <th>S.No</th>
                         <th>Name</th>
                         <th>Email</th>
+                        <th>Phone</th>
                         <th>Message</th>
                         <th>Date</th>
                         <th>Action</th>
@@ -32,13 +33,14 @@
                                         <td><?php echo $counter; ?></td>
                                         <td><?php echo $item['name']; ?></td>
                                         <td><a href="mailto:<?php echo $item['email']; ?>"><?php echo $item['email']; ?></a></td>
+                                        <td><a ><?php echo $item['phone']; ?></a></td>
                                         <td>    
-                                            <span class="btn btn-sm btn-info" data-toggle="modal" data-target="#showmessages<?php echo $item['uid'] ?>">
+                                            <span class="btn btn-sm btn-info" data-toggle="modal" data-target="#showmessages<?php echo $item['id'] ?>">
                                                 <i class="fas fa-eye"></i>
                                             </span> 
                                         </td>
                                         <!-- MODAL -->
-                                        <div class="modal fade" id="showmessages<?php echo $item['uid'] ?>" tabindex="1" role="dialog" aria-hidden="true">
+                                        <div class="modal fade" id="showmessages<?php echo $item['id'] ?>" tabindex="1" role="dialog" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -48,7 +50,7 @@
                                                     </div>
                                                     <div class="modal-body">
                                                         <p class="text-left" style="font-size:17px;">
-                                                            <b>Message :</b> <?php echo $item['remarks'] ?>.
+                                                            <b>Message :</b> <?php echo $item['message'] ?>.
                                                         </p>
                                                     </div>
                                                     <div class="modal-footer">
@@ -59,18 +61,18 @@
                                         </div>
                                         
                                         <td id="messagesmoment<?php echo $item['uid'] ?>">
-                                            <?php echo $item['inserted']; ?>
+                                            <?php echo $item['created_at']; ?>
                                         </td>
                                         <!-- SCRIPT FOR MOMENT JS -->
                                         <script>
                                             document.querySelector('#messagesmoment<?php echo $item['uid'] ?>')
-                                            .innerText = moment(document.querySelector('#messagesmoment<?php echo $item['uid'] ?>')
+                                            .innerText = moment(document.querySelector('#messagesmoment<?php echo $item['id'] ?>')
                                             .innerText).fromNow();
                                         </script>
 
-                                        <td><button data-toggle="modal" data-target="#deletemessages<?php echo $item['uid']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></td>
+                                        <td><button data-toggle="modal" data-target="#deletemessages<?php echo $item['id']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></td>
                                         <!-- MODAL -->
-                                        <div class="modal fade" id="deletemessages<?php echo $item['uid'] ?>" tabindex="1" role="dialog"  aria-hidden="true">
+                                        <div class="modal fade" id="deletemessages<?php echo $item['id'] ?>" tabindex="1" role="dialog"  aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-body">
@@ -82,7 +84,7 @@
                                                         </p>
                                                         <form method="post">
                                                             <p class="text-right">
-                                                                <input type="text" name="uid" value="<?php echo $item['uid']; ?>" style="display:none" required>
+                                                                <input type="text" name="uid" value="<?php echo $item['id']; ?>" style="display:none" required>
                                                                 <button name="messagesdelbtn" class="btn btn-md btn-danger text-white"><i class="fas fa-trash-alt"></i></button>
                                                             </p>
                                                         </form>

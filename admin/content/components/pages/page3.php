@@ -1,7 +1,7 @@
-<?php include("./php/insertnotice.php"); ?>
-<?php include("./php/viewnotice.php"); ?>
-<?php include("./php/deletenotice.php"); ?>
-<?php include("./php/updatenotice.php"); ?>
+<?php include("./php/inserttestimonials.php"); ?>
+<?php include("./php/viewtestimonials.php"); ?>
+<?php include("./php/deletetestimonials.php"); ?>
+<?php include("./php/updatetestimonial.php"); ?>
 
 <div class="mt-5" id="page3" style="display:none;">
     <div class="wrapper">

@@ -7,13 +7,13 @@
     </div>
     <ul class="section">
         <li class="active"> <i class="fas fa-image mr-4"></i> <span>Slider</span></li>
-        <li> <i class="fas fa-user mr-4"></i> <span>Applicants</span></li>
-        <li> <i class="fas fa-newspaper mr-4"></i> <span>Notice</span></li>
-        <li> <i class="fas fa-images mr-4"></i> <span>Gallery</span></li>
+        <li> <i class="fas fa-user mr-4"></i> <span>Company Information/Counter</span></li>
         <li> <i class="fas fa-users mr-4"></i> <span>Testimonial</span></li>
-        <li> <i class="fas fa-address-card mr-4"></i> <span>Modals</span></li>
         <li> <i class="fas fa-envelope mr-4"></i> <span>Messages</span></li>
-        <li> <i class="fas fa-newspaper mr-4"></i> <span>Council</span></li>
-        <li> <i class="fas fa-images mr-4"></i> <span>Event</span></li>
+        <li> <i class="fas fa-images mr-4"></i> <span>Gallery</span></li>
+        <!-- <li> <i class="fas fa-newspaper mr-4"></i> <span>Notice</span></li> -->
+        <!-- <li> <i class="fas fa-address-card mr-4"></i> <span>Modals</span></li> -->
+        <!-- <li> <i class="fas fa-newspaper mr-4"></i> <span>Council</span></li> -->
+        <!-- <li> <i class="fas fa-images mr-4"></i> <span>Event</span></li> -->
     </ul>
 </div>

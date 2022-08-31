@@ -29,7 +29,10 @@
                     </tr>
                 </thead>
                 <tbody>
+
+               
                     <?php
+                    
                         if(count($allslider) > 0) {
                             $counter = 1;
                             $allslider = array_reverse($allslider);
@@ -44,19 +47,19 @@
                                                 />
                                             </div>
                                         </td>
-                                        <td id="slidermoment<?php echo $item['uid'] ?>">
-                                            <?php echo $item['inserted']; ?>
+                                        <td id="slidermoment<?php echo $item['id'] ?>">
+                                            <?php echo $item['created_at']; ?>
                                         </td>
                                         <!-- SCRIPT FOR MOMENT JS -->
                                         <script>
-                                            document.querySelector('#slidermoment<?php echo $item['uid'] ?>')
-                                            .innerText = moment(document.querySelector('#slidermoment<?php echo $item['uid'] ?>')
+                                            document.querySelector('#slidermoment<?php echo $item['id'] ?>')
+                                            .innerText = moment(document.querySelector('#slidermoment<?php echo $item['id'] ?>')
                                             .innerText).fromNow();
                                         </script>
 
-                                        <td><button data-toggle="modal" data-target="#deleteslider<?php echo $item['uid']; ?>" class="btn btn-md btn-danger"><i class="fas fa-trash"></i></button></td>
+                                        <td><button data-toggle="modal" data-target="#deleteslider<?php echo $item['id']; ?>" class="btn btn-md btn-danger"><i class="fas fa-trash"></i></button></td>
                                         <!-- MODAL -->
-                                        <div class="modal fade" id="deleteslider<?php echo $item['uid'] ?>" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="deleteslider<?php echo $item['id'] ?>" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-body">
@@ -68,7 +71,7 @@
                                                         </p>
                                                         <form method="post">
                                                             <p class="text-right">
-                                                                <input type="text" name="uid" value="<?php echo $item['uid']; ?>" style="display:none" required>
+                                                                <input type="text" name="uid" value="<?php echo $item['id']; ?>" style="display:none" required>
                                                                 <input type="text" name="image" value="<?php echo $item['image']; ?>" style="display:none" required>
                                                                 <button name="sliderdelbtn" class="btn btn-md btn-danger text-white"><i class="fas fa-trash-alt"></i></button>
                                                             </p>

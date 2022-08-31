@@ -29,6 +29,7 @@
                 </thead>
                 <tbody>
                     <?php
+                        print_r($alltestimonials);
                         if(count($alltestimonials) > 0) {
                             $counter = 1;
                             $alltestimonials = array_reverse($alltestimonials);
@@ -36,8 +37,8 @@
                                 ?>
                                     <tr>
                                         <td><?php echo $counter; ?></td>
-                                        <td><?php echo $item['name']; ?></td>
-                                        <td><?php echo $item['position']; ?></td>
+                                        <td><?php echo $item['author']; ?></td>
+                                        <td><?php echo $item['designation']; ?></td>
                                         <td>
                                             <div class="img" style="width:50px;height:50px;border-radius:9px">
                                                 <img src="./assets/img/testimonials/<?php echo $item['image']; ?>" alt=""
@@ -47,12 +48,12 @@
                                         </td>
 
                                         <td>    
-                                            <span class="btn btn-sm btn-info" data-toggle="modal" data-target="#showtestimonials<?php echo $item['uid'] ?>">
+                                            <span class="btn btn-sm btn-info" data-toggle="modal" data-target="#showtestimonials<?php echo $item['id'] ?>">
                                                 <i class="fas fa-eye"></i>
                                             </span> 
                                         </td>
                                         <!-- MODAL -->
-                                        <div class="modal fade" id="showtestimonials<?php echo $item['uid'] ?>" tabindex="1" role="dialog" aria-hidden="true">
+                                        <div class="modal fade" id="showtestimonials<?php echo $item['id'] ?>" tabindex="1" role="dialog" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -62,7 +63,7 @@
                                                     </div>
                                                     <div class="modal-body">
                                                         <p class="text-left" style="font-size:17px;">
-                                                            <b>Review/Testimonial :</b> <?php echo $item['review'] ?>.
+                                                            <b>Review/Testimonial :</b> <?php echo $item['testimonial'] ?>.
                                                         </p>
                                                     </div>
                                                     <div class="modal-footer">
@@ -72,22 +73,22 @@
                                             </div>
                                         </div>
 
-                                        <td id="testimonialsmoment<?php echo $item['uid'] ?>">
-                                            <?php echo $item['inserted']; ?>
+                                        <td id="testimonialsmoment<?php echo $item['id'] ?>">
+                                            <?php echo $item['created_at']; ?>
                                         </td>
                                         <!-- SCRIPT FOR MOMENT JS -->
                                         <script>
-                                            document.querySelector('#testimonialsmoment<?php echo $item['uid'] ?>')
-                                            .innerText = moment(document.querySelector('#testimonialsmoment<?php echo $item['uid'] ?>')
+                                            document.querySelector('#testimonialsmoment<?php echo $item['id'] ?>')
+                                            .innerText = moment(document.querySelector('#testimonialsmoment<?php echo $item['id'] ?>')
                                             .innerText).fromNow();
                                         </script>
 
                                         <td>
-                                            <button data-toggle="modal" data-target="#updatetestimonials<?php echo $item['uid']; ?>" class="btn btn-sm btn-info"><i class="fas fa-pen"></i></button>
-                                            <button data-toggle="modal" data-target="#deletetestimonials<?php echo $item['uid']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                            <button data-toggle="modal" data-target="#updatetestimonials<?php echo $item['id']; ?>" class="btn btn-sm btn-info"><i class="fas fa-pen"></i></button>
+                                            <button data-toggle="modal" data-target="#deletetestimonials<?php echo $item['id']; ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
                                         </td>
                                         <!-- UPDATE MODAL -->
-                                        <div class="modal fade edittestimonial" id="updatetestimonials<?php echo $item['uid'] ?>" tabindex="1" role="dialog" aria-hidden="true">
+                                        <div class="modal fade edittestimonial" id="updatetestimonials<?php echo $item['id'] ?>" tabindex="1" role="dialog" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <form method="post">
@@ -97,10 +98,10 @@
                                                             </p>
                                                         </div>
                                                         <div class="modal-body">
-                                                            <input name="name" type="text" class="testimonial w-100 mb-3" value="<?php echo $item['name']; ?>" placeholder="Edit Full Name">
-                                                            <input name="position" type="text" class="testimonial w-100 mb-3" value="<?php echo $item['position']; ?>" placeholder="Edit Position">
-                                                            <textarea name="testimonial" class="testimonial w-100 mb-3" placeholder="Testimonial" cols="30" rows="5" required><?php echo $item['review']; ?></textarea>
-                                                            <input name="uid" type="text" value="<?php echo $item['uid']; ?>" style="display:none;">
+                                                            <input name="name" type="text" class="testimonial w-100 mb-3" value="<?php echo $item['author']; ?>" placeholder="Edit Full Name">
+                                                            <input name="position" type="text" class="testimonial w-100 mb-3" value="<?php echo $item['designation']; ?>" placeholder="Edit Position">
+                                                            <textarea name="testimonial" class="testimonial w-100 mb-3" placeholder="Testimonial" cols="30" rows="5" required><?php echo $item['testimonial']; ?></textarea>
+                                                            <input name="uid" type="text" value="<?php echo $item['id']; ?>" style="display:none;">
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button name="updatetestimonialbtn" class="testimonial float-right btn btn-md">Update</button>
@@ -110,7 +111,7 @@
                                             </div>
                                         </div>
                                         <!-- DELETE MODAL -->
-                                        <div class="modal fade" id="deletetestimonials<?php echo $item['uid'] ?>" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="deletetestimonials<?php echo $item['id'] ?>" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                     <div class="modal-body">
@@ -118,11 +119,11 @@
                                                             <span data-dismiss="modal" style="font-size:20px;cursor:pointer;">&times;</span>
                                                         </p>
                                                         <p class="text-left text-dark" style="font-size:17px;font-weight:600;">
-                                                            Are you sure you want to delete <?php echo $item['name'] ?>'s testimonial?
+                                                            Are you sure you want to delete <?php echo $item['author'] ?>'s testimonial?
                                                         </p>
                                                         <form method="post">
                                                             <p class="text-right">
-                                                                <input type="text" name="uid" value="<?php echo $item['uid']; ?>" style="display:none" required>
+                                                                <input type="text" name="uid" value="<?php echo $item['id']; ?>" style="display:none" required>
                                                                 <input type="text" name="image" value="<?php echo $item['image']; ?>" style="display:none" required>
                                                                 <button name="testimonialsdelbtn" class="btn btn-md btn-danger text-white"><i class="fas fa-trash-alt"></i></button>
                                                             </p>
