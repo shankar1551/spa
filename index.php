@@ -113,7 +113,7 @@
                 <div class="main-bar bg-white">
                     <div class="container">
                         <div class="logo-header">
-                            <a href="index.html">
+                            <a href="index.php">
                                 <img src="images/logo.png" width="216" height="37" alt="" />
                             </a>
                         </div>
@@ -290,7 +290,7 @@
                                 data-paddingleft="[0,0,0,0]"
                     
                                 style="z-index:13; text-transform:uppercase; font-weight:700;">
-                               <a href="javascript:;" class="site-button radius-sm button-lg">See all Services</a>
+                               <a href="services.php" class="site-button radius-sm button-lg">See all Services</a>
                                </div>
                             <!-- LAYER NR. 5 -->
                             
@@ -2410,7 +2410,7 @@
                                 
                                 <div class="col-md-3">
                                     <div class="call-to-action-right p-tb30">
-                                        <a href="contact-1.html" class="site-button-secondry text-uppercase radius-sm font-weight-600">
+                                        <a href="contact.php" class="site-button-secondry text-uppercase radius-sm font-weight-600">
                                             Contact us 
                                         </a>
                                     </div>
@@ -2432,7 +2432,7 @@
                             <div class="widget widget_about">
                                 <h4 class="widget-title">About Company</h4>
                                 <div class="logo-footer clearfix p-b15">
-                                    <a href="index.html"><img src="images/footer-logo.png" width="230" height="67" alt=""/></a>
+                                    <a href="index.php"><img src="images/footer-logo.png" width="230" height="67" alt=""/></a>
                                 </div>
                                 <p>Thewebmax ipsum dolor sit amet, consectetuer adipiscing elit,
                                       sed diam nonummy nibh euismod tincidunt ut laoreet dolore agna aliquam erat .   
@@ -2519,11 +2519,11 @@
                             <div class="widget widget_newsletter">
                                 <h4 class="widget-title">Newsletter</h4>
                                 <div class="newsletter-bx">
-                                    <form role="search" method="post">
+                                    <form role="search" method="post" id="news_letter">
                                         <div class="input-group">
-                                        <input name="news-letter" class="form-control" placeholder="ENTER YOUR EMAIL" type="text">
+                                        <input name="news-letter" id="phone2" class="form-control" placeholder="ENTER YOUR Mobible Number" type="text">
                                         <span class="input-group-btn">
-                                            <button type="submit" class="site-button"><i class="fa fa-paper-plane-o"></i></button>
+                                            <button type="submit" class="site-button">Submit</button>
                                         </span>
                                     </div>
                                      </form>
@@ -2640,6 +2640,7 @@
 <!-- JAVASCRIPT  FILES ========================================= -->
 <!-- //CUSTOM JS  -->
 <script type="text/javascript" src="./js/custom/index.js" defer></script>
+<script type="text/javascript" src="./js/custom/newsletter.js" defer></script>
 <script   src="js/jquery-1.12.4.min.js"></script><!-- JQUERY.MIN JS -->
 <script   src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
 

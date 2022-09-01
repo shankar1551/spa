@@ -113,7 +113,7 @@
                 <div class="main-bar bg-white">
                     <div class="container">
                         <div class="logo-header">
-                            <a href="index.html">
+                            <a href="index.php">
                                 <img src="images/logo.png" width="216" height="37" alt="" />
                             </a>
                         </div>
@@ -194,46 +194,73 @@
                                    </div>                            
                                </div>
                                 <div class="gmap-outline m-b30">
-                                    <div id="gmap_canvas" class="google-map"></div>
+                                    <div id="gmap_canvas" class="google-map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.8972516385065!2d83.461686365015!3d27.689570382799182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39968662af7e7e57%3A0x5a6ebfecb8ba4a16!2sMilan%20Chowk%2C%20Butwal%2032907!5e0!3m2!1sen!2snp!4v1662012590632!5m2!1sen!2snp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
                                 </div>
                             </div>
 
                             <!-- CONTACT FORM-->
                             <div class="wt-box col-md-6">
-                                <div class="section-content bg-gray">
-                                    <div class="contact-home-right p-a30">
-                                        <h5 class="text-uppercase font-26 p-b20 font-weight-400">GET IN TOUCH</h5>
-                                        <form  class="cons-contact-form2" method="post" id="contact_form_contact" action="#">
-                                          <div class="form-group">
-                                              <div class="input-group">
-                                                  <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                                  <input id="name" name="name" type="text" required class="form-control" placeholder="Neme">
-                                              </div>
-                                          </div>
-                                          <div class="form-group">
-                                              <div class="input-group">
-                                                  <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                                  <input name="email" id="email" type="text" class="form-control" required placeholder="Email">
-                                              </div>
-                                          </div>
-                                          <div class="form-group">
-                                              <div class="input-group">
-                                                  <span class="input-group-addon"><i class="fa fa-book"></i></span>
-                                                  <input name="phone" id="phone" type="text" class="form-control" required placeholder="Phone">
-                                              </div>
-                                          </div>
-                                          <div class="form-group">
-                                              <div class="input-group">
-                                                  <span class="input-group-addon v-align-t"><i class="fa fa-pencil"></i></span>
-                                                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message"></textarea>
-                                              </div>
-                                          </div>
-                                          <button type="submit" class="site-button skew-icon-btn radius-sm">
-                                            <span class="font-weight-700 inline-block text-uppercase p-lr15">Submit</span> 
-                                          </button>
-                                      </form>
-                                    </div>                             
-                              </div>
+                                <h4 class="text-uppercase">Contact Form </h4>
+                                <div class="wt-separator-outer m-b30">
+                                    <div class="wt-separator style-icon">
+                                       <i class="fa fa-leaf text-black"></i>
+                                       <span class="separator-left bg-primary"></span>
+                                       <span class="separator-right bg-primary"></span>
+                                    </div>                            
+                                </div>
+                                
+                                <form class="cons-contact-form" method="post" id="contact_form_contact" action="#" >
+                        
+                                    <div class="row">
+                                    
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                                    <input id="name" name="name" type="text" required class="form-control" placeholder="Name">
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                                    <input name="email" id="email" type="email" class="form-control" required placeholder="Email">
+                                                </div>
+                                            </div>
+        
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                                    <input name="phone" id="phone" type="text" class="form-control" required placeholder="Phone">
+                                                </div>
+                                            </div>
+        
+                                        </div>
+        
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon v-align-m"><i class="fa fa-pencil"></i></span>
+                                                    <textarea name="message" id="message" rows="4" class="form-control " required placeholder="Message"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-md-12 text-right">
+                                            <button name="submit" type="submit" value="Submit" class="site-button  m-r15">Submit </button>
+                                            <button name="Resat" id="reset_btn" type="reset" value="Reset"  class="site-button " >Reset  </button>
+                                        </div>
+        
+                                    </div>
+
+                        		</form>
                         
                             </div>
                                 
@@ -310,7 +337,7 @@
                         
                         <div class="col-md-3">
                             <div class="call-to-action-right p-tb30">
-                                <a href="contact-1.html" class="site-button-secondry radius-sm text-uppercase font-weight-600">
+                                <a href="contact.php" class="site-button-secondry radius-sm text-uppercase font-weight-600">
                                     Contact us
                                 </a>
                             </div>
@@ -328,7 +355,7 @@
                             <div class="widget widget_about">
                                 <h4 class="widget-title">About Company</h4>
                                 <div class="logo-footer clearfix p-b15">
-                                    <a href="index.html"><img src="images/footer-logo.png" width="230" height="67" alt=""/></a>
+                                    <a href="index.php"><img src="images/footer-logo.png" width="230" height="67" alt=""/></a>
                                 </div>
                                 <p>Thewebmax ipsum dolor sit amet, consectetuer adipiscing elit,
                                       sed diam nonummy nibh euismod tincidunt ut laoreet dolore agna aliquam erat .   
@@ -412,14 +439,14 @@
                         </div>
                         <!-- NEWSLETTER -->
                         <div class="col-md-3 col-sm-6">
-                            <div class="widget widget_newsletter">
+                        <div class="widget widget_newsletter">
                                 <h4 class="widget-title">Newsletter</h4>
                                 <div class="newsletter-bx">
-                                    <form role="search" method="post">
+                                    <form role="search" method="post" id="news_letter">
                                         <div class="input-group">
-                                        <input name="news-letter" class="form-control" placeholder="ENTER YOUR EMAIL" type="text">
+                                        <input name="news-letter" id="phone2" class="form-control" placeholder="ENTER YOUR Mobible Number" type="text">
                                         <span class="input-group-btn">
-                                            <button type="submit" class="site-button"><i class="fa fa-paper-plane-o"></i></button>
+                                            <button type="submit" class="site-button">Submit</button>
                                         </span>
                                     </div>
                                      </form>
@@ -536,7 +563,10 @@
 <!-- JAVASCRIPT  FILES ========================================= --> 
 
 <!-- users js -->
+<script type="text/javascript" src="./js/custom/index.js" defer></script>
+<script type="text/javascript" src="./js/custom/newsletter.js" defer></script>
 <script src="./js/custom/contact.js" defer></script>
+
 
 <script   src="js/jquery-1.12.4.min.js"></script><!-- JQUERY.MIN JS -->
 <script   src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->

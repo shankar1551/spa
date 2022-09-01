@@ -1,6 +1,7 @@
 
 async function addMessage() {
-    let body = document.querySelector("#contact_form_contact");
+          
+          let body = document.querySelector("#contact_form_contact");
   
     const name = body.querySelector("#name");
     const phone = body.querySelector("#phone");
@@ -29,6 +30,8 @@ async function addMessage() {
         if(response)
         {
           let model = document.getElementById("model_btn");
+          var reset_btn = document.getElementById("reset_btn");
+          reset_btn.click();
           model.click();
         }
   
@@ -41,7 +44,6 @@ async function addMessage() {
     
   document.querySelector("#contact_form_contact").addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log('default prevented');
     addMessage();
    
   });

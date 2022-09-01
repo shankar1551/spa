@@ -71,7 +71,7 @@
                 $counter++;
             }
 
-            $query .= ",inserted = NOW() WHERE uid = '$uid'";
+            $query .= ",inserted = NOW() WHERE id = '$uid'";
             
             $exe = $this->connect()->query($query);
 

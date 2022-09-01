@@ -17,14 +17,14 @@
         if($result3 == 1) { //CONCLUDING THE RESULT
             ?>
             <script>
-                window.open('./index.php?page=5',"_self")
+                window.open('./index.php?page=3',"_self")
             </script>
             <?php
         }else {
         ?>
             <script>
             alert('Error!');
-            window.open('./index.php?page=5',"_self");
+            window.open('./index.php?page=3',"_self");
             </script>
         <?php
         }

@@ -109,7 +109,7 @@
                 <div class="main-bar bg-white">
                     <div class="container">
                         <div class="logo-header">
-                            <a href="index.html">
+                            <a href="index.php">
                                 <img src="images/logo.png" width="216" height="37" alt="" />
                             </a>
                         </div>
@@ -568,7 +568,7 @@
                         
                         <div class="col-md-3">
                             <div class="call-to-action-right p-tb30">
-                                <a href="contact-1.html" class="site-button-secondry radius-sm text-uppercase font-weight-600">
+                                <a href="contact.php" class="site-button-secondry radius-sm text-uppercase font-weight-600">
                                     Contact us
                                 </a>
                             </div>
@@ -586,7 +586,7 @@
                             <div class="widget widget_about">
                                 <h4 class="widget-title">About Company</h4>
                                 <div class="logo-footer clearfix p-b15">
-                                    <a href="index.html"><img src="images/footer-logo.png" width="230" height="67" alt=""/></a>
+                                    <a href="index.php"><img src="images/footer-logo.png" width="230" height="67" alt=""/></a>
                                 </div>
                                 <p>Thewebmax ipsum dolor sit amet, consectetuer adipiscing elit,
                                       sed diam nonummy nibh euismod tincidunt ut laoreet dolore agna aliquam erat .   
@@ -670,14 +670,14 @@
                         </div>
                         <!-- NEWSLETTER -->
                         <div class="col-md-3 col-sm-6">
-                            <div class="widget widget_newsletter">
+                        <div class="widget widget_newsletter">
                                 <h4 class="widget-title">Newsletter</h4>
                                 <div class="newsletter-bx">
-                                    <form role="search" method="post">
+                                    <form role="search" method="post" id="news_letter">
                                         <div class="input-group">
-                                        <input name="news-letter" class="form-control" placeholder="ENTER YOUR EMAIL" type="text">
+                                        <input name="news-letter" id="phone2" class="form-control" placeholder="ENTER YOUR Mobible Number" type="text">
                                         <span class="input-group-btn">
-                                            <button type="submit" class="site-button"><i class="fa fa-paper-plane-o"></i></button>
+                                            <button type="submit" class="site-button">Submit</button>
                                         </span>
                                     </div>
                                      </form>
@@ -791,6 +791,8 @@
 </div>
 <!-- LOADING AREA  END ====== -->
 <!-- JAVASCRIPT  FILES ========================================= --> 
+<script type="text/javascript" src="./js/custom/newsletter.js" defer></script>
+
 <script   src="js/jquery-1.12.4.min.js"></script><!-- JQUERY.MIN JS -->
 <script   src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
 
@@ -898,6 +900,36 @@
     </div>    
 </div>
 <!-- STYLE SWITCHER END ==== -->
+
+
+<!-- =========MODEL========== -->
+<div class="m-b30">
+                                <!-- <h4 class="text-uppercase m-b20 m-t50">Default Modal</h4>  -->
+                                 
+                                <!-- TRIGGER THE MODAL WITH A BUTTON -->
+                                <button style="display:none" id="model_btn" type="button" class="site-button  m-r15" data-toggle="modal" data-target="#Default-Modal">Default Modal  <i class="fa fa-angle-double-right"></i></button>
+                                <!-- MODAL -->
+                                <div id="Default-Modal" class="modal fade" role="dialog">
+                                  <div class="modal-dialog">
+                                    <!-- MODAL CONTENT-->
+                                    <div class="modal-content">
+                                      <div class="modal-header bg-primary">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title text-white">Success</h4>
+                                      </div>
+                                      <div class="modal-body">
+                                        <p>Your Feedback is Successfully Received. Thank You!</p>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="site-button " data-dismiss="modal">Close
+                                         <i class="fa fa-angle-double-right"></i></button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="wt-divider bg-gray-dark"><i class="icon-dot c-square"></i></div>
+                            </div>
+<!-- =======MODEL END======== -->
 
 
 
