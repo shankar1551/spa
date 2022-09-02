@@ -1,10 +1,10 @@
 <?php
     //DELETE OPERATION
-    if(isset($_POST['newsletterdelbtn'])) {
+    if(isset($_POST['letterdelbtn'])) {
         $obj = new query();
-
+       
         //DELETE DATA
-        $filteredId = $obj->FilterString($_POST['uid']);
+        $filteredId = $obj->FilterString($_POST['id']);
 
         $delete = new query(); //CALLING CLASS
         $result3 = $delete->DeleteData('newsletter', $filteredId); //SENDING DYNAMIC PARAMETERS
@@ -24,4 +24,5 @@
         <?php
         }
     }
+    
 ?>

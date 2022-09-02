@@ -1,5 +1,4 @@
 <?php include("./php/viewmessages.php"); ?>
-<?php include("./php/deletemessages.php"); ?>
 
 <div class="mt-5" id="page5" style="display:none">
     <div class="wrapper">

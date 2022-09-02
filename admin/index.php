@@ -23,7 +23,7 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="assets/logo.png" />
-      <title>Butwal Model College | Admin Panel | Login</title>
+      <title>Spa | Admin Panel | Login</title>
 
       <!-- font awesome -->
       <link

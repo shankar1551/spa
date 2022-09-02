@@ -1,7 +1,7 @@
 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12" id="menu-wrapper">
     <div class="head">
         <div class="img">
-            <img src="./assets/img/logo.jpg" alt="">
+            <img src="./assets/img/favicon.png" alt="">
         </div>
         <p class="text">Spa</p>
     </div>
