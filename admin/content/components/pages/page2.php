@@ -1,7 +1,7 @@
 <?php include("./php/viewclients.php"); ?>
 <?php include("./php/updateclients.php"); ?>
 
-<div class="mt-5" id="page5" style="display:none;">
+<div class="mt-5" id="page2" style="display:none;">
     <div class="wrapper">
         <div class="top">
             <div class="title">

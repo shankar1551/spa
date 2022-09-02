@@ -178,7 +178,7 @@
             	<div class="container">
                     <ul class="wt-breadcrumb breadcrumb-style-2">
                         <li><a href="javascript:void(0);"><i class="fa fa-home"></i> Home</a></li>
-                        <li>Gallery Grid 2</li>
+                        <li>Gallery </li>
                     </ul>
                 </div>
             </div>
@@ -189,16 +189,16 @@
                 <div class="container">
                 
                     <!-- PAGINATION TOP START -->
-                    <!-- <div class="filter-wrap p-tb15">
+                    <div class="filter-wrap p-tb15">
                         <ul class="masonry-filter link-style  text-uppercase">
-                            <li class="active"><a data-filter="*" href="#">All</a></li>
-                            <li><a data-filter=".cat-1" href="#">Spa</a></li>
+                            <li class="active"><a data-filter="*" href="#">Galery</a></li>
+                            <!-- <li><a data-filter=".cat-1" href="#">Spa</a></li>
                             <li><a data-filter=".cat-2" href="#">Hair Makeup</a></li>
                             <li><a data-filter=".cat-3" href="#">Waxing</a></li>
                             <li><a data-filter=".cat-4" href="#">Facial</a></li>
-                            <li><a data-filter=".cat-5" href="#">Massage</a></li>
+                            <li><a data-filter=".cat-5" href="#">Massage</a></li> -->
                         </ul>
-                    </div> -->
+                    </div>
                     <!-- PAGINATION END -->
                     
                     <!-- GALLERY CONTENT START -->

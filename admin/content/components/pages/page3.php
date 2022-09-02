@@ -3,7 +3,7 @@
 <?php include("./php/deletetestimonials.php"); ?>
 <?php include("./php/updatetestimonial.php"); ?>
 
-<div class="mt-5" id="page5" style="display:none;">
+<div class="mt-5" id="page3" style="display:none;">
     <div class="wrapper">
         <div class="top">
             <div class="title">

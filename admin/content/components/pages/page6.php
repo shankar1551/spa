@@ -1,7 +1,7 @@
 <?php include("./php/viewnewsletters.php"); ?>
 <?php include("./php/deletenewsletters.php"); ?>
 
-<div class="mt-5" id="page7" style="display:none">
+<div class="mt-5" id="page6" style="display:none">
     <div class="wrapper">
         <div class="top">
             <div class="title">
@@ -28,14 +28,8 @@
                                 ?>
                                     <tr>
                                         <td><?php echo $counter; ?></td>
-                                        <td><?php echo $item['name']; ?></td>
-                                        <td><a href="mailto:<?php echo $item['email']; ?>"><?php echo $item['email']; ?></a></td>
-                                        <td><a ><?php echo $item['phone']; ?></a></td>
-                                        <td>    
-                                            <span class="btn btn-sm btn-info" data-toggle="modal" data-target="#showmessages<?php echo $item['id'] ?>">
-                                                <i class="fas fa-eye"></i>
-                                            </span> 
-                                        </td>
+                                        <td><?php echo $item['phone']; ?></td>
+                                        
                                         <!-- MODAL -->
                                         <div class="modal fade" id="showmessages<?php echo $item['id'] ?>" tabindex="1" role="dialog" aria-hidden="true">
                                             <div class="modal-dialog" role="document">
@@ -57,12 +51,12 @@
                                             </div>
                                         </div>
                                         
-                                        <td id="messagesmoment<?php echo $item['uid'] ?>">
+                                        <td id="messagesmoment<?php echo $item['id'] ?>">
                                             <?php echo $item['created_at']; ?>
                                         </td>
                                         <!-- SCRIPT FOR MOMENT JS -->
                                         <script>
-                                            document.querySelector('#messagesmoment<?php echo $item['uid'] ?>')
+                                            document.querySelector('#messagesmoment<?php echo $item['id'] ?>')
                                             .innerText = moment(document.querySelector('#messagesmoment<?php echo $item['id'] ?>')
                                             .innerText).fromNow();
                                         </script>
@@ -82,7 +76,7 @@
                                                         <form method="post">
                                                             <p class="text-right">
                                                                 <input type="text" name="uid" value="<?php echo $item['id']; ?>" style="display:none" required>
-                                                                <button name="messagesdelbtn" class="btn btn-md btn-danger text-white"><i class="fas fa-trash-alt"></i></button>
+                                                                <button name="newsletterdelbtn" class="btn btn-md btn-danger text-white"><i class="fas fa-trash-alt"></i></button>
                                                             </p>
                                                         </form>
                                                     </div>

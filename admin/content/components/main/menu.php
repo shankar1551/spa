@@ -11,5 +11,7 @@
         <li> <i class="fas fa-users mr-4"></i> <span>Testimonial</span></li>
         <li> <i class="fas fa-images mr-4"></i> <span>Gallery</span></li>
         <li> <i class="fas fa-envelope mr-4"></i> <span>Messages</span></li>
+        <li> <i class="fas fa-envelope mr-4"></i> <span>News Letter</span></li>
+        <li> <i class="fas fa-envelope mr-4"></i> <span>Clients</span></li>
     </ul>
 </div>

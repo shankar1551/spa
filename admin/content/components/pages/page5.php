@@ -1,7 +1,7 @@
 <?php include("./php/viewmessages.php"); ?>
 <?php include("./php/deletemessages.php"); ?>
 
-<div class="mt-5" id="page7" style="display:none">
+<div class="mt-5" id="page5" style="display:none">
     <div class="wrapper">
         <div class="top">
             <div class="title">

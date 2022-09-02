@@ -10,6 +10,7 @@
             include("./components/pages/page4.php"); 
             include("./components/pages/page5.php"); 
             include("./components/pages/page6.php"); 
+            include("./components/pages/page7.php"); 
         ?>
     </div>
 </div>

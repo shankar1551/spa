@@ -59,7 +59,7 @@
         <div class="row">
           <div class="col-md-3 col-sm-12 d-flex justify-content-center">
             <div class="image">
-              <img src="./assets/logo.png" alt="logo" />
+              <img src="../admin/assets/logo.png" alt="logo"  style="object-fit: fill; height:auto;width:auto"/>
             </div>
             <p class="text-center">Welcome</p>
             <form method="POST" class="containts">
