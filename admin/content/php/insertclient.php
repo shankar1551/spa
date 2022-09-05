@@ -7,7 +7,10 @@
 
         $designation = $obj->FilterString($_POST['designation']);
         $education = $obj->FilterString($_POST['education']);
-       
+        $client_id = $obj->FilterString($_POST['client_id']);
+        $date = $obj->FilterString($_POST['date']);
+        $address = $obj->FilterString($_POST['address']);
+        
 
         //IMAGE
         $file = $_FILES['image'];
@@ -20,7 +23,7 @@
         $fileUploadResult = $obj->UploadFile($filenewname,$filetempname,$filedestination); // UPLOADING FILE
 
         if($fileUploadResult == 1) {
-            $array = array('name' => $title,'image' => $filenewname,'designation'=>$designation,'education'=>$education);
+            $array = array('client_id'=>$client_id,'address'=>$address,'date'=>$date,'name' => $title,'image' => $filenewname,'designation'=>$designation,'education'=>$education);
             $result2 = $obj->InsertData('client_info',$array); // SENDING DYNAMIC PARAMETERS
           
             if($result2 == 1) { //CONCLUDING THE RESULT

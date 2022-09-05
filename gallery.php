@@ -167,7 +167,7 @@
             	<div class="overlay-main bg-black opacity-07"></div>
                 <div class="container">
                     <div class="wt-bnr-inr-entry">
-                        <h1 class="text-white">Gallery Grid 2</h1>
+                        <h1 class="text-white">Gallery Grid </h1>
                     </div>
                 </div>
             </div>

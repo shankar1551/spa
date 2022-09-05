@@ -20,6 +20,8 @@
                     <tr>
                         <th>S.No</th>
                         <th>Name</th>
+                        <th>Client ID</th>
+                        <th>Address</th>
                         <th>Image</th>
                         <th>Designation</th>
                         <th>Education</th>
@@ -37,6 +39,8 @@
                     <tr>
                         <td><?php echo $counter; ?></td>
                         <td><?php echo $item['name']; ?></td>
+                        <td><?php echo $item['client_id']; ?></td>
+                        <td><?php echo $item['address']; ?></td>
                         <td>
                             <div class="img" style="width:50px;height:50px;border-radius:9px">
                                 <img src="./assets/img/client/<?php echo $item['image']; ?>" alt=""
@@ -152,8 +156,16 @@
                         <input name="designation" type="text" class="event w-100 mb-3" placeholder=" designation" required>
                         
                         <input name="education" type="text" class="event w-100 mb-3" placeholder=" education" required>
+                        <input name="address" type="text" class="event w-100 mb-3" placeholder=" Address" required>
+                        
+                        <label for="date">Date</label>
+                        
+                        <input name="date" type="date" class="w-100 mb-5" required>
+                        
+                        <input name="client_id" type="number" placeholder="client unique id" class="w-100 mb-5" required>
                         
                         <input name="image" type="file" class="w-100 mb-5" required>
+                        
                         <button name="eventbtn" class="w-100 btn btn-md">Insert</button>
                     </form>
                 </div>
